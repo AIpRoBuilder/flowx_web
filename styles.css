@@ -347,7 +347,7 @@ figcaption {
 }
 
 .section-heading h2 {
-  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  font-size: clamp(1.32rem, 2.5vw, 1.9rem);
 }
 
 .section-heading p {
@@ -534,15 +534,15 @@ figcaption {
 }
 
 @media (max-width: 1100px) {
-  .feature-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .hero-grid,
   .config-card,
   .contact-card,
   .showcase-featured {
     grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .showcase-featured figure {
@@ -952,7 +952,7 @@ li {
 }
 
 .section-heading h2 {
-  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  font-size: clamp(1.32rem, 2.5vw, 1.9rem);
 }
 
 .section-heading p {
