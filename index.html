@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowX | 对话式工作流生成平台</title>
+    <meta name="theme-color" content="#f7f2e9" />
+    <meta
+      name="description"
+      content="FlowX 是一个通过对话创建、更新并运行工作流的 MCP 服务器，适合接入 Claude Code、Cursor、VS Code Copilot Chat 等客户端。"
+    />
+    <meta property="og:title" content="FlowX | 对话式工作流生成平台" />
+    <meta
+      property="og:description"
+      content="一个适合部署到 GitHub Pages 的 FlowX 静态展示页，包含项目简介、使用方式和图文案例。"
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <a class="brand" href="#top">FlowX</a>
+          <div class="topbar-links">
+            <a href="#overview">项目介绍</a>
+            <a href="#usage">使用方式</a>
+            <a href="#showcase">图文示例</a>
+            <a href="#contact">联系</a>
+          </div>
+        </nav>
+
+        <div class="hero-grid" id="top">
+          <section class="hero-copy">
+            <p class="eyebrow">MCP Workflow Builder</p>
+            <h1 class="hero-title">
+              <span class="hero-title-line">让工作流搭建</span>
+              <span class="hero-title-line hero-title-accent">像聊天一样直接</span>
+            </h1>
+            <p class="hero-text">
+              FlowX 把工作流创建、更新、启动、调试和运行封装成 MCP 工具。
+              你只需要描述需求，Agent 就能持续生成并迭代后端工作流。
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#usage">查看使用方式</a>
+              <a class="button secondary" href="#showcase">浏览案例</a>
+            </div>
+          </section>
+
+          <aside class="hero-panel">
+            <div class="panel-card panel-architecture">
+              <p class="panel-title">FlowX 的工作路径</p>
+              <ol>
+                <li>接收自然语言需求</li>
+                <li>生成或更新工作流文件</li>
+                <li>启动 FastAPI 后端</li>
+                <li>通过 MCP 工具执行工作流步骤</li>
+              </ol>
+            </div>
+            <div class="chip-stack" aria-label="Supported agents">
+              <div class="chip-row">
+                <span>Claude Code</span>
+                <span>Cursor</span>
+                <span>VS Code</span>
+                <span>Codex</span>
+              </div>
+              <div class="chip-row">
+                <span>WorkBuddy</span>
+                <span>TraeWork</span>
+                <span>Hermes</span>
+                <span>千问办公</span>
+                <span>DuMate</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <main>
+        <section class="section" id="overview">
+          <div class="section-heading">
+            <p class="eyebrow">Overview</p>
+            <h2>FlowX 适合什么场景</h2>
+            <p>
+              如果你希望把“提出需求 → 生成工作流 → 启动服务 → 在对话中运行”串成一条连续链路，
+              FlowX 就是这条链路的 MCP 入口。
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>对话生成工作流</h3>
+              <p>直接用自然语言描述任务，生成 <code>workflow.json</code>、节点脚本和入口代码。</p>
+            </article>
+            <article class="feature-card">
+              <h3>动态更新与重载</h3>
+              <p>修改需求后可继续更新节点，并立即重启后端，避免旧版本流程继续运行。</p>
+            </article>
+            <article class="feature-card">
+              <h3>面向 MCP 客户端</h3>
+              <p>支持 stdio 和 Streamable HTTP，便于接入本地 Agent 或常驻远程服务。</p>
+            </article>
+            <article class="feature-card">
+              <h3>运行结果可回收</h3>
+              <p>可以查看输入格式、执行工作流步骤，并拿回结果、文件或图像用于后续对话。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-alt" id="usage">
+          <div class="section-heading">
+            <p class="eyebrow">Usage</p>
+            <h2>接入 FlowX</h2>
+          </div>
+
+          <div class="config-card">
+            <div>
+              <p class="config-label">本地 MCP 配置示例</p>
+              <h3>把 FlowX 挂到你的 Agent 客户端里</h3>
+              <p>下面是一个精简版的本地 stdio 配置，适合快速验证。</p>
+            </div>
+            <pre><code>{
+  "mcpServers": {
+    "flowx": {
+      "command": "python3.10",
+      "args": ["/Users/user/Desktop/codes/FlowX/run_server.py"],
+      "env": {
+        "FLOWX_LLM_PROVIDER": "deepseek",
+        "FLOWX_LLM_MODEL": "deepseek-chat",
+        "FLOWX_LLM_API_KEY": "&lt;your key&gt;",
+        "FLOWX_DEFAULT_WORKSPACE": "/Users/user/Desktop/codes/flowx_workspaces"
+      }
+    }
+  }
+}</code></pre>
+          </div>
+        </section>
+
+        <section class="section" id="showcase">
+          <div class="section-heading">
+            <p class="eyebrow">Showcase</p>
+            <h2>五个典型图文案例</h2>
+          </div>
+
+          <div class="showcase-grid">
+            <article class="showcase-card showcase-featured">
+              <div class="showcase-copy">
+                <p class="showcase-tag">stock_pressure</p>
+                <div class="showcase-meta">
+                  <span>量化分析</span>
+                  <span>图表输出</span>
+                </div>
+                <h3>股票庄家出货压力位预测</h3>
+                <p>
+                  根据最近 N 个交易日的价格、成交量和筹码分布，推断多个潜在出货压力区，
+                  并把关键参考位画到图上。
+                </p>
+              </div>
+              <figure>
+                <a class="image-link" href="assets/stock_pressure.png" target="_blank" rel="noreferrer">
+                  <img src="assets/stock_pressure.png" alt="股票庄家出货压力位预测示例" loading="lazy" />
+                </a>
+                <figcaption>输出包含表格、K 线图、压力区和一句话结论。点击图片可查看原图。</figcaption>
+              </figure>
+            </article>
+
+            <article class="showcase-card">
+              <div class="showcase-copy">
+                <p class="showcase-tag">stock_distribution</p>
+                <div class="showcase-meta">
+                  <span>筹码估计</span>
+                  <span>状态识别</span>
+                </div>
+                <h3>大小户筹码分布估计</h3>
+                <p>把价格和成交量转换成隐含大户/小户筹码状态，用图表解释吸筹、派发和成本峰。</p>
+              </div>
+              <figure>
+                <a class="image-link" href="assets/stock_chip_distribution.png" target="_blank" rel="noreferrer">
+                  <img src="assets/stock_chip_distribution.png" alt="大小户筹码分布估计示例" loading="lazy" />
+                </a>
+                <figcaption>适合做量化研究辅助分析与图形解释。点击图片可查看原图。</figcaption>
+              </figure>
+            </article>
+
+            <article class="showcase-card">
+              <div class="showcase-copy">
+                <p class="showcase-tag">policy_scrawler</p>
+                <div class="showcase-meta">
+                  <span>批量采集</span>
+                  <span>结果交付</span>
+                </div>
+                <h3>政策机构官网批量采集</h3>
+                <p>结合地域、机构模板和浏览器搜索，批量收集全国政策机构官网 URL 并给出质量结果。</p>
+              </div>
+              <figure>
+                <a class="image-link" href="assets/policy_scrawler.png" target="_blank" rel="noreferrer">
+                  <img src="assets/policy_scrawler.png" alt="政策机构官网批量采集示例" loading="lazy" />
+                </a>
+                <figcaption>适合大规模数据整理、搜索和交付型工作流。点击图片可查看原图。</figcaption>
+              </figure>
+            </article>
+
+            <article class="showcase-card">
+              <div class="showcase-copy">
+                <p class="showcase-tag">start-up-hiring</p>
+                <div class="showcase-meta">
+                  <span>线索搜集</span>
+                  <span>企业研究</span>
+                </div>
+                <h3>AI 创业公司招聘线索搜集</h3>
+                <p>从 LinkedIn 等来源整理正在招聘的 AI Startup、官网、创始人、头衔和地区信息。</p>
+              </div>
+              <figure>
+                <a class="image-link" href="assets/start-up-hiring.png" target="_blank" rel="noreferrer">
+                  <img src="assets/start-up-hiring.png" alt="AI 创业公司招聘线索搜集示例" loading="lazy" />
+                </a>
+                <figcaption>适合销售线索、招聘情报和企业研究类任务。点击图片可查看原图。</figcaption>
+              </figure>
+            </article>
+
+            <article class="showcase-card">
+              <div class="showcase-copy">
+                <p class="showcase-tag">picture_to_svg</p>
+                <div class="showcase-meta">
+                  <span>图片处理</span>
+                  <span>SVG 导出</span>
+                </div>
+                <h3>二维码脱敏转 SVG</h3>
+                <p>上传微信二维码图片，自动去除姓名、头像等信息，并导出为更干净的 SVG 文件。</p>
+              </div>
+              <figure>
+                <a class="image-link" href="assets/picture_to_svg.png" target="_blank" rel="noreferrer">
+                  <img src="assets/picture_to_svg.png" alt="二维码脱敏转 SVG 示例" loading="lazy" />
+                </a>
+                <figcaption>适合文件清洗、脱敏和可编辑矢量化场景。点击图片可查看原图。</figcaption>
+              </figure>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-alt contact-section" id="contact">
+          <div class="section-heading compact">
+            <p class="eyebrow">Contact</p>
+            <h2>想试用或共建 FlowX</h2>
+            <p>你可以直接发邮件，或通过微信二维码联系作者。</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-copy">
+              <p class="contact-label">Email</p>
+              <a class="contact-link" href="mailto:peterxcx@gmail.com">peterxcx@gmail.com</a>
+              <p>
+                如果你正在做 Agent 平台、自动化数据处理或工作流生成系统，FlowX 可以作为一个直接可接入的 MCP 中枢。
+              </p>
+            </div>
+            <figure class="qrcode-card">
+              <img src="assets/qrcode.svg" alt="FlowX 微信二维码" />
+              <figcaption>微信联系</figcaption>
+            </figure>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>FlowX static site for GitHub Pages. No build step required.</p>
+      </footer>
+    </div>
+  </body>
+</html>
