@@ -417,6 +417,46 @@ pre {
   padding: 20px 20px 10px;
 }
 
+.prompt-details {
+  margin-top: 14px;
+  border: 1px solid rgba(31, 111, 235, 0.12);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.prompt-details summary {
+  cursor: pointer;
+  padding: 12px 14px;
+  color: var(--accent-strong);
+  font-size: 0.9rem;
+  font-weight: 700;
+  list-style: none;
+}
+
+.prompt-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.prompt-details summary::after {
+  content: "+";
+  float: right;
+  font-size: 1rem;
+}
+
+.prompt-details[open] summary::after {
+  content: "-";
+}
+
+.prompt-block {
+  margin: 0;
+  padding: 0 14px 14px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
 .showcase-featured .showcase-copy {
   display: flex;
   flex-direction: column;
