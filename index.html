@@ -5,12 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#090b0f" />
     <title>FlowX | Generative Workflows for AI Agents</title>
-    <meta name="description" content="FlowX is an open-source generative workflow layer for AI agents. Generate, run, and evolve reusable workflows from natural language with MCP, the Python SDK, and A2A." />
-    <meta property="og:title" content="FlowX | Generative Workflows for AI Agents" />
-    <meta property="og:description" content="Turn natural language into executable, inspectable, and evolving workflows. Let your agent build the process, not just deliver an answer." />
+    <meta name="description" content="FlowX is an open-source generative workflow layer for AI agents; generate, run, and evolve reusable workflows from natural language with MCP, the Python SDK, and A2A" />
+    <link rel="canonical" href="https://aiprobuilder.github.io/flowx_web/" />
+    <link rel="alternate" hreflang="en" href="https://aiprobuilder.github.io/flowx_web/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://aiprobuilder.github.io/flowx_web/index.zh-CN.html" />
+    <link rel="alternate" hreflang="x-default" href="https://aiprobuilder.github.io/flowx_web/" />
     <meta property="og:type" content="website" />
-    <link rel="alternate" hreflang="zh-CN" href="index.zh-CN.html" />
-    <link rel="alternate" hreflang="en" href="index.html" />
+    <meta property="og:site_name" content="FlowX" />
+    <meta property="og:url" content="https://aiprobuilder.github.io/flowx_web/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:title" content="FlowX | Generative Workflows for AI Agents" />
+    <meta property="og:description" content="Turn natural language into executable, inspectable, and evolving workflows; let your agent build the process, not just deliver an answer" />
+    <meta property="og:image" content="https://aiprobuilder.github.io/flowx_web/assets/social-card.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FlowX: build the process and keep it evolving" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FlowX | Generative Workflows for AI Agents" />
+    <meta name="twitter:description" content="Turn natural language into executable, inspectable, and evolving workflows; let your agent build the process, not just deliver an answer" />
+    <meta name="twitter:image" content="https://aiprobuilder.github.io/flowx_web/assets/social-card.png" />
+    <meta name="twitter:image:alt" content="FlowX: build the process and keep it evolving" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "FlowX",
+        "description": "An open-source generative workflow layer for AI agents, with MCP, Python SDK, and A2A interfaces",
+        "url": "https://aiprobuilder.github.io/flowx_web/",
+        "codeRepository": "https://github.com/AIpRoBuilder/FlowX",
+        "programmingLanguage": "Python",
+        "license": "https://github.com/AIpRoBuilder/FlowX/blob/main/LICENSE",
+        "inLanguage": "en"
+      }
+    </script>
     <link rel="icon" type="image/svg+xml" href="assets/flowx-mark.svg" />
     <link rel="stylesheet" href="styles.css" />
     <script src="assets/site.js" defer></script>
@@ -61,11 +90,11 @@
         <div class="hero-inner container">
           <div class="hero-copy">
             <p class="hero-kicker"><span class="status-dot"></span> OPEN SOURCE <span class="kicker-divider">/</span> GENERATIVE WORKFLOW</p>
-            <h1>From ideas to<br /><span>workflows that<br />evolve and reusable</span><span class="title-period">.</span></h1>
-            <p class="hero-description">Generate, run, and evolve AI workflows from natural language. FlowX turns one-off answers into processes you can inspect, reuse, and improve.</p>
+            <h1>From ideas to<br /><span>AI workflows that<br />evolve and adapt</span></h1>
+            <p class="hero-description">Generate, run, and evolve AI workflows from natural language; FlowX turns one-off answers into processes you can inspect, reuse, and improve</p>
             <div class="agent-prompt">
               <div class="prompt-header"><span>PROMPT FOR YOUR AGENT</span><button type="button" class="copy-button" data-copy-target="agent-prompt" data-copied="Copied" data-failed="Copy manually" aria-label="Copy the agent installation prompt"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div>
-              <p id="agent-prompt">Read https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md and https://github.com/AIpRoBuilder/FlowX#setup. Install the skill for this agent and install and verify FlowX in a suitable Python 3.10+ virtual environment. Connect local MCP if needed, guide me through secure LLM configuration, and show me how to create a workflow. Do not ask for secrets in chat.</p>
+              <p id="agent-prompt">Read https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md and https://github.com/AIpRoBuilder/FlowX#setup; install the skill for this agent and install and verify FlowX in a suitable Python 3.10+ virtual environment; connect local MCP if needed, guide me through secure LLM configuration, and show me how to create a workflow; do not ask for secrets in chat</p>
               <span class="copy-result" role="status" aria-live="polite"></span>
             </div>
             <div class="hero-actions">
@@ -75,7 +104,7 @@
             <p class="hero-note"><span></span> Open source · Local-first · Built for your agent</p>
           </div>
 
-          <div class="hero-visual" role="img" aria-label="FlowX workflow diagram: natural language intent becomes a workflow graph and nodes that are audited, tested, run, and evolved.">
+          <div class="hero-visual" role="img" aria-label="FlowX workflow diagram: natural language intent becomes a workflow graph and nodes that are audited, tested, run, and evolved">
             <div class="visual-topline"><span>FLOWX ENGINE</span><span><i></i> GENERATIVE WORKFLOW</span></div>
             <div class="visual-orbit orbit-outer"></div>
             <div class="visual-orbit orbit-inner"></div>
@@ -98,20 +127,20 @@
             <div class="visual-bottomline"><span>DESCRIBE</span><span>GENERATE</span><span>RUN</span><span>EVOLVE</span><span>↻</span></div>
           </div>
         </div>
-        <div class="hero-bottom container"><span>BUILT FOR AGENTS. MADE TO EVOLVE.</span><span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
+        <div class="hero-bottom container"><span>BUILT FOR AGENTS / MADE TO EVOLVE</span><span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
       </section>
 
       <section class="section capabilities" id="features">
         <div class="container">
           <div class="section-intro split-intro">
-            <div><p class="eyebrow"><span>01</span> / WHAT YOU GET</p><h2>More than an answer.<br />Build the <span class="text-gradient">process.</span></h2></div>
-            <p class="section-lead">FlowX focuses on the execution layer behind your agent: turn requirements into clear, runnable workflows that improve with feedback.</p>
+            <div><p class="eyebrow"><span>01</span> / WHAT YOU GET</p><h2>More than an answer<br />Build the <span class="text-gradient">process</span></h2></div>
+            <p class="section-lead">FlowX focuses on the execution layer behind your agent: turn requirements into clear, runnable workflows that improve with feedback</p>
           </div>
           <div class="feature-grid">
-            <article class="feature-card"><div class="feature-icon icon-orange" aria-hidden="true">✳</div><span class="card-index">01 / GENERATE</span><h3>From intent to workflow</h3><p>Describe what you need in natural language to generate a workflow graph, node documentation, Python node code, and a backend entry point.</p></article>
-            <article class="feature-card"><div class="feature-icon icon-green" aria-hidden="true">⌁</div><span class="card-index">02 / VERIFY</span><h3>Audited and tested nodes</h3><p>Each business node goes through generation, audit, testing, and bounded repair. Nodes that still fail are not published.</p></article>
-            <article class="feature-card"><div class="feature-icon icon-purple" aria-hidden="true">↻</div><span class="card-index">03 / EVOLVE</span><h3>Evolve through conversation</h3><p>Change an entire workflow or specific nodes as needed. Unchanged parts are reused as the process grows with your requirements.</p></article>
-            <article class="feature-card"><div class="feature-icon icon-blue" aria-hidden="true">⌘</div><span class="card-index">04 / REUSE</span><h3>Inspectable and reusable</h3><p>Workflow graphs, code, and versioned artifacts are stored locally so you can inspect, reopen, and evolve them later.</p></article>
+            <article class="feature-card"><div class="feature-icon icon-orange" aria-hidden="true">✳</div><span class="card-index">01 / GENERATE</span><h3>From intent to workflow</h3><p>Describe what you need in natural language to generate a workflow graph, node documentation, Python node code, and a backend entry point</p></article>
+            <article class="feature-card"><div class="feature-icon icon-green" aria-hidden="true">⌁</div><span class="card-index">02 / VERIFY</span><h3>Audited and tested nodes</h3><p>Each business node goes through generation, audit, testing, and bounded repair; nodes that still fail are not published</p></article>
+            <article class="feature-card"><div class="feature-icon icon-purple" aria-hidden="true">↻</div><span class="card-index">03 / EVOLVE</span><h3>Evolve through conversation</h3><p>Change an entire workflow or specific nodes as needed; unchanged parts are reused as the process grows with your requirements</p></article>
+            <article class="feature-card"><div class="feature-icon icon-blue" aria-hidden="true">⌘</div><span class="card-index">04 / REUSE</span><h3>Inspectable and reusable</h3><p>Workflow graphs, code, and versioned artifacts are stored locally so you can inspect, reopen, and evolve them later</p></article>
           </div>
         </div>
       </section>
@@ -119,16 +148,16 @@
       <section class="section process-section grid-surface" id="how-it-works">
         <div class="container">
           <div class="section-intro split-intro">
-            <div><p class="eyebrow"><span>02</span> / HOW IT WORKS</p><h2>From a few words<br />to a <span class="text-gradient">reusable process.</span></h2></div>
-            <p class="section-lead">FlowX connects intent to execution, generating explicit graphs and code instead of one-off results hidden in a conversation.</p>
+            <div><p class="eyebrow"><span>02</span> / HOW IT WORKS</p><h2>From a few words<br />to a <span class="text-gradient">reusable process</span></h2></div>
+            <p class="section-lead">FlowX connects intent to execution, generating explicit graphs and code instead of one-off results hidden in a conversation</p>
           </div>
           <div class="process-board">
             <div class="board-header"><span><span class="board-dot"></span> THE FLOWX LOOP</span><span>INTENT → WORKFLOW → EVOLUTION</span></div>
             <div class="process-grid">
-              <article class="process-step"><span class="step-number">01</span><div class="step-symbol symbol-orange">✳</div><h3>Describe</h3><p>Tell your agent about your goal and the process you need.</p><span class="step-arrow" aria-hidden="true">→</span></article>
-              <article class="process-step"><span class="step-number">02</span><div class="step-symbol symbol-purple">◇</div><h3>Generate and verify</h3><p>Build the graph, nodes, and entry point; nodes are audited, tested, and repaired.</p><span class="step-arrow" aria-hidden="true">→</span></article>
-              <article class="process-step"><span class="step-number">03</span><div class="step-symbol symbol-blue">▷</div><h3>Inspect and run</h3><p>Inspect the artifacts, start the service, and run the workflow interactively.</p><span class="step-arrow" aria-hidden="true">→</span></article>
-              <article class="process-step"><span class="step-number">04</span><div class="step-symbol symbol-green">↻</div><h3>Evolve and reuse</h3><p>Refine the workflow or its nodes from feedback and reuse what you've built.</p></article>
+              <article class="process-step"><span class="step-number">01</span><div class="step-symbol symbol-orange">✳</div><h3>Describe</h3><p>Tell your agent about your goal and the process you need</p><span class="step-arrow" aria-hidden="true">→</span></article>
+              <article class="process-step"><span class="step-number">02</span><div class="step-symbol symbol-purple">◇</div><h3>Generate and verify</h3><p>Build the graph, nodes, and entry point; nodes are audited, tested, and repaired</p><span class="step-arrow" aria-hidden="true">→</span></article>
+              <article class="process-step"><span class="step-number">03</span><div class="step-symbol symbol-blue">▷</div><h3>Inspect and run</h3><p>Inspect the artifacts, start the service, and run the workflow interactively</p><span class="step-arrow" aria-hidden="true">→</span></article>
+              <article class="process-step"><span class="step-number">04</span><div class="step-symbol symbol-green">↻</div><h3>Evolve and reuse</h3><p>Refine the workflow or its nodes from feedback and reuse what you've built</p></article>
             </div>
             <div class="board-footer"><span>GENERATIVE WORKFLOW LAYER</span><span>A process that keeps improving, not a one-off answer <span aria-hidden="true">↗</span></span></div>
           </div>
@@ -138,12 +167,12 @@
       <section class="section quickstart-section grid-surface" id="quickstart">
         <div class="container">
           <div class="section-intro split-intro">
-            <div><p class="eyebrow"><span>03</span> / QUICKSTART</p><h2>Start here.<br /><span class="text-gradient">Build your first workflow.</span></h2></div>
-            <p class="section-lead">After installing FlowX, connect your agent with MCP or use the Python SDK directly. You'll need Python 3.10+ and a configured LLM provider.</p>
+            <div><p class="eyebrow"><span>03</span> / QUICKSTART</p><h2>Start here<br /><span class="text-gradient">Build your first workflow</span></h2></div>
+            <p class="section-lead">After installing FlowX, connect your agent with MCP or use the Python SDK directly; you'll need Python 3.10+ and a configured LLM provider</p>
           </div>
           <div class="quickstart-grid">
             <article class="code-card">
-              <div class="code-card-intro"><span class="card-index">01 / MCP</span><h3>Connect your agent</h3><p>Register the local service in your MCP client. Replace the paths with your virtual environment and configuration directory; on Windows, use the Scripts executable.</p></div>
+              <div class="code-card-intro"><span class="card-index">01 / MCP</span><h3>Connect your agent</h3><p>Register the local service in your MCP client; replace the paths with your virtual environment and configuration directory; on Windows, use the Scripts executable</p></div>
               <div class="code-window"><div class="code-header"><span>mcp.json</span><button type="button" class="copy-button" data-copy-target="mcp-code" data-copied="Copied" data-failed="Copy manually" aria-label="Copy MCP configuration"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div><pre><code id="mcp-code">{
   "mcpServers": {
     "flowx": {
@@ -154,10 +183,10 @@
     }
   }
 }</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
-              <p class="code-caption">Set <code>FLOWX_LLM_PROVIDER</code>, <code>FLOWX_LLM_MODEL</code>, <code>FLOWX_LLM_API_KEY</code>, and <code>FLOWX_DEFAULT_WORKSPACE</code> in the configuration directory's <code>.env</code>; never commit secrets to a repository.</p>
+              <p class="code-caption">Set <code>FLOWX_LLM_PROVIDER</code>, <code>FLOWX_LLM_MODEL</code>, <code>FLOWX_LLM_API_KEY</code>, and <code>FLOWX_DEFAULT_WORKSPACE</code> in the configuration directory's <code>.env</code>; never commit secrets to a repository</p>
             </article>
             <article class="code-card">
-              <div class="code-card-intro"><span class="card-index">02 / PYTHON SDK</span><h3>Build a workflow in code</h3><p>Once your LLM is configured, use the SDK to build a workflow from natural language and inspect its artifacts.</p></div>
+              <div class="code-card-intro"><span class="card-index">02 / PYTHON SDK</span><h3>Build a workflow in code</h3><p>Once your LLM is configured, use the SDK to build a workflow from natural language and inspect its artifacts</p></div>
               <div class="code-window"><div class="code-header"><span>build_workflow.py</span><button type="button" class="copy-button" data-copy-target="sdk-code" data-copied="Copied" data-failed="Copy manually" aria-label="Copy Python example"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div><pre><code id="sdk-code">from flowx_sdk import FlowXClient
 
 with FlowXClient(workspace="./workflows") as flowx:
@@ -168,7 +197,7 @@ with FlowXClient(workspace="./workflows") as flowx:
 
     print("Workflow:", result.workflow_id)
     print("Artifacts:", flowx.artifacts(result.workflow_id))</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
-              <p class="code-caption">Configure the model variables in the SDK's environment. Building may execute node tests; review the artifacts and code before running the service.</p>
+              <p class="code-caption">Configure the model variables in the SDK's environment; building may execute node tests, so review the artifacts and code before running the service</p>
             </article>
           </div>
           <p class="quickstart-footer">Need configuration details? <a href="https://github.com/AIpRoBuilder/FlowX#setup" target="_blank" rel="noopener noreferrer">Read the full setup guide ↗</a></p>
@@ -178,47 +207,47 @@ with FlowXClient(workspace="./workflows") as flowx:
       <section class="section interfaces-section" id="interfaces">
         <div class="container">
           <div class="section-intro split-intro">
-            <div><p class="eyebrow"><span>04</span> / ONE CORE, THREE INTERFACES</p><h2>Connect to FlowX<br /><span class="text-gradient">your way.</span></h2></div>
-            <p class="section-lead">One shared core, three interfaces. Connect workflow generation to an agent client, a Python application, or another agent.</p>
+            <div><p class="eyebrow"><span>04</span> / ONE CORE, THREE INTERFACES</p><h2>Connect to FlowX<br /><span class="text-gradient">your way</span></h2></div>
+            <p class="section-lead">One shared core, three interfaces; connect workflow generation to an agent client, a Python application, or another agent</p>
           </div>
           <div class="interface-grid">
-            <article class="interface-card"><div class="interface-top"><span class="interface-label">01 / AGENT CLIENT</span><span class="interface-icon icon-orange" aria-hidden="true">↗</span></div><h3>MCP</h3><p>Connect an MCP-capable agent over local stdio to create, inspect, run, and evolve workflows. Builds run in the background with queryable status.</p><span class="interface-tag">LOCAL STDIO</span></article>
-            <article class="interface-card"><div class="interface-top"><span class="interface-label">02 / YOUR APPLICATION</span><span class="interface-icon icon-purple" aria-hidden="true">{ }</span></div><h3>Python SDK</h3><p>Use the shared core directly from a Python agent or your own application backend to build, inspect, run, and evolve workflows.</p><span class="interface-tag">PYTHON 3.10+</span></article>
-            <article class="interface-card"><div class="interface-top"><span class="interface-label">03 / AGENT TO AGENT</span><span class="interface-icon icon-blue" aria-hidden="true">⇄</span></div><h3>A2A</h3><p>Let other agents delegate workflow building to FlowX through Agent2Agent. The adapter currently supports non-streaming workflow building.</p><span class="interface-tag">NON-STREAMING</span></article>
+            <article class="interface-card"><div class="interface-top"><span class="interface-label">01 / AGENT CLIENT</span><span class="interface-icon icon-orange" aria-hidden="true">↗</span></div><h3>MCP</h3><p>Connect an MCP-capable agent over local stdio to create, inspect, run, and evolve workflows; builds run in the background with queryable status</p><span class="interface-tag">LOCAL STDIO</span></article>
+            <article class="interface-card"><div class="interface-top"><span class="interface-label">02 / YOUR APPLICATION</span><span class="interface-icon icon-purple" aria-hidden="true">{ }</span></div><h3>Python SDK</h3><p>Use the shared core directly from a Python agent or your own application backend to build, inspect, run, and evolve workflows</p><span class="interface-tag">PYTHON 3.10+</span></article>
+            <article class="interface-card"><div class="interface-top"><span class="interface-label">03 / AGENT TO AGENT</span><span class="interface-icon icon-blue" aria-hidden="true">⇄</span></div><h3>A2A</h3><p>Let other agents delegate workflow building to FlowX through Agent2Agent; the adapter currently supports non-streaming workflow building</p><span class="interface-tag">NON-STREAMING</span></article>
           </div>
-          <div class="interface-note"><span class="note-mark">✦</span><p><strong>Your interface, your choice.</strong> FlowX is model- and UI-agnostic: your frontend renders interactions and events, while FlowX provides the workflow layer behind them.</p><a href="https://github.com/AIpRoBuilder/FlowX#architecture" target="_blank" rel="noopener noreferrer">Explore the architecture ↗</a></div>
+          <div class="interface-note"><span class="note-mark">✦</span><p><strong>Your interface, your choice</strong> — FlowX is model- and UI-agnostic: your frontend renders interactions and events, while FlowX provides the workflow layer behind them</p><a href="https://github.com/AIpRoBuilder/FlowX#architecture" target="_blank" rel="noopener noreferrer">Explore the architecture ↗</a></div>
         </div>
       </section>
 
       <section class="section start-section grid-surface" id="get-started">
         <div class="container start-layout">
-          <div class="start-copy"><p class="eyebrow"><span>05</span> / GET STARTED</p><h2>Let your agent<br /><span class="text-gradient">start building.</span></h2><p class="section-lead">Start locally and connect your existing agent or application. See the project documentation for installation, configuration, and interface details.</p><a class="button button-primary" href="https://github.com/AIpRoBuilder/FlowX#setup" target="_blank" rel="noopener noreferrer">Read the setup guide <span aria-hidden="true">↗</span></a></div>
+          <div class="start-copy"><p class="eyebrow"><span>05</span> / GET STARTED</p><h2>Let your agent<br /><span class="text-gradient">start building</span></h2><p class="section-lead">Start locally and connect your existing agent or application; see the project documentation for installation, configuration, and interface details</p><a class="button button-primary" href="https://github.com/AIpRoBuilder/FlowX#setup" target="_blank" rel="noopener noreferrer">Read the setup guide <span aria-hidden="true">↗</span></a></div>
           <div class="start-list">
-            <div class="start-item"><span>01</span><div><h3>Prepare your environment</h3><p>You'll need Python 3.10+ and an OpenAI-compatible model provider.</p></div></div>
-            <div class="start-item"><span>02</span><div><h3>Install FlowX</h3><p>One installation includes the shared core, MCP, Python SDK, and A2A adapter.</p></div></div>
-            <div class="start-item"><span>03</span><div><h3>Configure and connect</h3><p>Configure your model, API key, and workspace, then choose an interface.</p></div></div>
-            <div class="start-item"><span>04</span><div><h3>Build and evolve</h3><p>Describe your requirements, inspect the build, and keep improving your workflow.</p></div></div>
+            <div class="start-item"><span>01</span><div><h3>Prepare your environment</h3><p>You'll need Python 3.10+ and an OpenAI-compatible model provider</p></div></div>
+            <div class="start-item"><span>02</span><div><h3>Install FlowX</h3><p>One installation includes the shared core, MCP, Python SDK, and A2A adapter</p></div></div>
+            <div class="start-item"><span>03</span><div><h3>Configure and connect</h3><p>Configure your model, API key, and workspace, then choose an interface</p></div></div>
+            <div class="start-item"><span>04</span><div><h3>Build and evolve</h3><p>Describe your requirements, inspect the build, and keep improving your workflow</p></div></div>
           </div>
         </div>
       </section>
 
       <section class="section faq-section" id="faq">
         <div class="container faq-layout">
-          <div><p class="eyebrow"><span>06</span> / GOOD TO KNOW</p><h2>Questions<span class="title-period">.</span></h2><p class="section-lead">Want to know more about FlowX?</p><a class="text-link" href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">Read the full documentation ↗</a></div>
+          <div><p class="eyebrow"><span>06</span> / GOOD TO KNOW</p><h2>Questions</h2><p class="section-lead">Want to know more about FlowX?</p><a class="text-link" href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">Read the full documentation ↗</a></div>
           <div class="faq-list">
-            <details><summary>Is FlowX a visual workflow editor?<span aria-hidden="true">+</span></summary><p>No. FlowX is a generative workflow layer and does not include a user interface. Your agent or application handles interaction and presentation; FlowX generates, runs, and evolves the process behind it.</p></details>
-            <details><summary>Where are generated workflows stored?<span aria-hidden="true">+</span></summary><p>Workflow artifacts are stored in your configured local workspace, including the workflow graph, node code, and backend entry point. You can inspect and evolve them later.</p></details>
-            <details><summary>What happens when a node fails its test?<span aria-hidden="true">+</span></summary><p>Node building includes audit, testing, and bounded repair. You can provide repair guidance when needed; nodes that still fail are not published.</p></details>
-            <details><summary>How can I connect to FlowX?<span aria-hidden="true">+</span></summary><p>FlowX supports local stdio MCP, a Python SDK, and an A2A adapter. The A2A adapter currently supports non-streaming workflow building.</p></details>
+            <details><summary>Is FlowX a visual workflow editor?<span aria-hidden="true">+</span></summary><p>No; FlowX is a generative workflow layer and does not include a user interface; your agent or application handles interaction and presentation, while FlowX generates, runs, and evolves the process behind it</p></details>
+            <details><summary>Where are generated workflows stored?<span aria-hidden="true">+</span></summary><p>Workflow artifacts are stored in your configured local workspace, including the workflow graph, node code, and backend entry point; you can inspect and evolve them later</p></details>
+            <details><summary>What happens when a node fails its test?<span aria-hidden="true">+</span></summary><p>Node building includes audit, testing, and bounded repair; you can provide repair guidance when needed, and nodes that still fail are not published</p></details>
+            <details><summary>How can I connect to FlowX?<span aria-hidden="true">+</span></summary><p>FlowX supports local stdio MCP, a Python SDK, and an A2A adapter; the A2A adapter currently supports non-streaming workflow building</p></details>
           </div>
         </div>
       </section>
 
       <section class="contact-section">
-        <div class="container contact-inner"><div><p class="eyebrow"><span>LET'S BUILD</span> / TOGETHER</p><h2>Build what comes<br /><span class="text-gradient">next for your agent.</span></h2><p>Explore FlowX or join us in building generative workflows.</p><div class="contact-actions"><a class="button button-primary" href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">Explore on GitHub <span aria-hidden="true">↗</span></a><a class="button button-outline" href="mailto:peterxcx@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></div></div><figure class="contact-qr"><img src="assets/qrcode.svg" alt="FlowX WeChat contact QR code" loading="lazy" /><figcaption>Connect on WeChat</figcaption></figure></div>
+        <div class="container contact-inner"><div><p class="eyebrow"><span>LET'S BUILD</span> / TOGETHER</p><h2>Build what comes<br /><span class="text-gradient">next for your agent</span></h2><p>Explore FlowX or join us in building generative workflows</p><div class="contact-actions"><a class="button button-primary" href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">Explore on GitHub <span aria-hidden="true">↗</span></a><a class="button button-outline" href="mailto:peterxcx@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></div></div><figure class="contact-qr"><img src="assets/qrcode.svg" alt="FlowX WeChat contact QR code" loading="lazy" /><figcaption>Connect on WeChat</figcaption></figure></div>
       </section>
     </main>
 
-    <footer class="site-footer"><div class="container footer-inner"><div><a class="brand footer-brand" href="#top"><img src="assets/flowx-mark.svg" alt="" width="30" height="30" /><span>Flow<span class="brand-x">X</span></span></a><p>Generative workflows for AI agents.</p></div><div class="footer-links"><a href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://github.com/AIpRoBuilder/FlowX#readme" target="_blank" rel="noopener noreferrer">Documentation ↗</a><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0 ↗</a><a href="mailto:peterxcx@gmail.com">Contact</a></div><p class="footer-end">BUILD THE PROCESS. KEEP IT EVOLVING.</p></div></footer>
+    <footer class="site-footer"><div class="container footer-inner"><div><a class="brand footer-brand" href="#top"><img src="assets/flowx-mark.svg" alt="" width="30" height="30" /><span>Flow<span class="brand-x">X</span></span></a><p>Generative workflows for AI agents</p></div><div class="footer-links"><a href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://github.com/AIpRoBuilder/FlowX#readme" target="_blank" rel="noopener noreferrer">Documentation ↗</a><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0 ↗</a><a href="mailto:peterxcx@gmail.com">Contact</a></div><p class="footer-end">BUILD THE PROCESS / KEEP IT EVOLVING</p></div></footer>
   </body>
 </html>

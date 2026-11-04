@@ -16,7 +16,17 @@
 docker compose up --build -d
 ```
 
-默认监听本机 8080 端口。网站文件为 `index.html`、`index.zh-CN.html`、`index.en.html`（旧英文地址的兼容跳转）、`styles.css` 和 `assets/`。
+默认监听本机 8080 端口。网站文件为 `index.html`、`index.zh-CN.html`、`index.en.html`（旧英文地址的兼容跳转）、`styles.css`、`assets/`、`robots.txt` 和 `sitemap.xml`。
+
+## 搜索与分享
+
+网站的规范地址为 <https://aiprobuilder.github.io/flowx_web/>。中英文页面均包含规范地址、语言替代链接、社交分享元数据和结构化数据。站点地图仅列出规范的中英文页面；旧英文地址会跳转至首页。
+
+搜索引擎只读取域名根目录下的 `robots.txt`。仓库中的文件适用于部署在域名根目录的站点，但 GitHub Pages 将本项目放在 `/flowx_web/` 子路径下，因此该文件无法控制共享域名。请在搜索引擎站长工具中提交 <https://aiprobuilder.github.io/flowx_web/sitemap.xml>，或在你有权限时将此站点地图地址添加到域名根目录的 `robots.txt`。
+
+如果部署到其他规范域名或路径，请同步更新 HTML 元数据和结构化数据、`sitemap.xml`、`robots.txt` 以及 SEO 测试中的绝对地址，并确保分享图片可公开访问。可编辑源文件为 `assets/social-card.svg`；修改后需重新生成 `assets/social-card.png`（例如使用 `rsvg-convert`）。
+
+可使用 Node.js 18 或更高版本运行 SEO 检查：`node --test tests/seo.test.cjs`。网站部署本身无需安装依赖。
 
 ## 了解 FlowX
 

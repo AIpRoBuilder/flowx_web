@@ -59,8 +59,8 @@ button, summary { font: inherit; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { margin-bottom: 25px; font-size: clamp(2.7rem, 4.2vw, 4.3rem); line-height: 1.19; letter-spacing: -.065em; font-weight: 750; }
 html[lang="en"] .hero h1 { font-size: clamp(2.35rem, 3.8vw, 3.65rem); }
-h1 > span:not(.title-period), .text-gradient { color: #f7bd83; background: linear-gradient(100deg, #ffc879 0%, #e4a5b3 45%, #bda2ff 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.title-period { color: #f1b575; }
+html[lang="zh-CN"] .hero h1 { font-size: clamp(2.1rem, 3.5vw, 3.6rem); }
+h1 > span, .text-gradient { color: #f7bd83; background: linear-gradient(100deg, #ffc879 0%, #e4a5b3 45%, #bda2ff 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .hero-description { max-width: 530px; margin-bottom: 22px; color: #acb1bb; font-size: 1.03rem; line-height: 1.95; }
 .agent-prompt { max-width: 560px; margin-bottom: 22px; padding: 15px 17px; border: 1px solid #3b3b44; background: rgba(17, 18, 23, .95); }
 .prompt-header, .code-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: #858b96; font: 600 .65rem "SFMono-Regular", Consolas, monospace; letter-spacing: .1em; }

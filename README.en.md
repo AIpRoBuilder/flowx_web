@@ -16,7 +16,17 @@ The site can be deployed to GitHub Pages or another static host. An Nginx contai
 docker compose up --build -d
 ```
 
-The default host port is 8080. The site consists of `index.html`, `index.zh-CN.html`, `index.en.html` (a compatibility redirect), `styles.css`, and `assets/`.
+The default host port is 8080. The site consists of `index.html`, `index.zh-CN.html`, `index.en.html` (a compatibility redirect), `styles.css`, `assets/`, `robots.txt`, and `sitemap.xml`.
+
+## Search and sharing
+
+The canonical site is <https://aiprobuilder.github.io/flowx_web/>. Both language pages include canonical and language-alternate links, social sharing metadata, and structured data. The sitemap lists only the canonical English and Chinese pages; the old English URL redirects to the homepage.
+
+Search engines only read `robots.txt` from the domain root. The included file works for a root-hosted deployment, but GitHub Pages serves this project under `/flowx_web/`, so its `robots.txt` cannot control the shared domain. Submit <https://aiprobuilder.github.io/flowx_web/sitemap.xml> in your search engine's webmaster tools, or add its sitemap URL to the domain-root `robots.txt` if you control it.
+
+When deploying to a different canonical domain or path, update the absolute URLs in the HTML metadata and structured data, `sitemap.xml`, `robots.txt`, and the SEO tests. Keep the share image publicly accessible. The editable source is `assets/social-card.svg`; regenerate `assets/social-card.png` after changing it (for example, with `rsvg-convert`).
+
+Run the SEO checks with Node.js 18 or newer: `node --test tests/seo.test.cjs`. No dependencies are required to serve the site.
 
 ## Learn about FlowX
 

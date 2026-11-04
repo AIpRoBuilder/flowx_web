@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aiprobuilder.github.io/flowx_web/sitemap.xml
