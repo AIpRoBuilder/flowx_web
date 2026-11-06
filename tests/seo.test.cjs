@@ -37,6 +37,12 @@ for (const page of [
     assert.match(html, new RegExp(`<html lang="${page.language}">`));
     assert.ok(html.match(/<title>([^<]+)<\/title>/)?.[1]);
     assert.ok(meta('name', 'description'));
+    const head = html.match(/<head>([\s\S]*?)<\/head>/i)?.[1];
+    assert.ok(head, 'expected a head element');
+    assert.equal(
+      only(tags(head, 'meta').filter((item) => item.name === 'google-site-verification'), 'Google site verification').content,
+      'z1j2lOwTCyCSmdxdT_rCZAdQoIIs76KouPiEtdd7D3k'
+    );
     assert.equal(only(links.filter((item) => item.rel === 'canonical'), 'canonical link').href, page.url);
     const languageLinks = links.filter((item) => item.rel === 'alternate' && item.hreflang);
     assert.equal(languageLinks.length, Object.keys(alternates).length);
