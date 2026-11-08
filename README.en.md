@@ -20,9 +20,9 @@ The default host port is 8080. The site consists of `index.html`, `index.zh-CN.h
 
 ## Search and sharing
 
-The canonical site is <https://aiprobuilder.github.io/flowx_web/>. Both language pages include canonical and language-alternate links, social sharing metadata, and structured data. The sitemap lists only the canonical English and Chinese pages; the old English URL redirects to the homepage.
+The canonical site is <https://www.flow-x.work/>. Both language pages include canonical and language-alternate links, social sharing metadata, and structured data. The sitemap lists only the canonical English and Chinese pages; the old English URL redirects to the homepage.
 
-Search engines only read `robots.txt` from the domain root. The included file works for a root-hosted deployment, but GitHub Pages serves this project under `/flowx_web/`, so its `robots.txt` cannot control the shared domain. Submit <https://aiprobuilder.github.io/flowx_web/sitemap.xml> in your search engine's webmaster tools, or add its sitemap URL to the domain-root `robots.txt` if you control it.
+Search engines only read `robots.txt` from the domain root. When deployed at the root of the custom domain, the included file declares the sitemap URL. Submit <https://www.flow-x.work/sitemap.xml> in your search engine's webmaster tools.
 
 When deploying to a different canonical domain or path, update the absolute URLs in the HTML metadata and structured data, `sitemap.xml`, `robots.txt`, and the SEO tests. Keep the share image publicly accessible. The editable source is `assets/social-card.svg`; regenerate `assets/social-card.png` after changing it (for example, with `rsvg-convert`).
 

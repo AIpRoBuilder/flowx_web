@@ -4,7 +4,7 @@ const path = require('node:path');
 const test = require('node:test');
 
 const root = path.join(__dirname, '..');
-const site = 'https://aiprobuilder.github.io/flowx_web/';
+const site = 'https://www.flow-x.work/';
 const alternates = {
   en: site,
   'zh-CN': `${site}index.zh-CN.html`,
