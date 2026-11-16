@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="z1j2lOwTCyCSmdxdT_rCZAdQoIIs76KouPiEtdd7D3k" />
     <meta name="baidu-site-verification" content="codeva-i7WjuOg6xc" />
     <title>FlowX | Generative Workflows for AI Agents</title>
-    <meta name="description" content="FlowX is an open-source generative workflow layer for AI agents; generate, run, and evolve reusable workflows from natural language with MCP, the Python SDK, and A2A" />
+    <meta name="description" content="FlowX is an open-source generative workflow layer for AI agents; generate, run, and evolve reusable workflows from natural language with MCP, the Python SDK, A2A, and agent skills for Claude Code, Codex, Hermes, and DeepSeek Harness" />
     <link rel="canonical" href="https://www.flow-x.work/" />
     <link rel="alternate" hreflang="en" href="https://www.flow-x.work/" />
     <link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/index.zh-CN.html" />
@@ -18,7 +18,7 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="zh_CN" />
     <meta property="og:title" content="FlowX | Generative Workflows for AI Agents" />
-    <meta property="og:description" content="Turn natural language into executable, inspectable, and evolving workflows; let your agent build the process, not just deliver an answer" />
+    <meta property="og:description" content="Turn natural language into executable, inspectable, and evolving workflows; install the FlowX skill or plugin for Claude Code, Codex, Hermes, and DeepSeek Harness" />
     <meta property="og:image" content="https://www.flow-x.work/assets/social-card.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
@@ -26,7 +26,7 @@
     <meta property="og:image:alt" content="FlowX: build the process and keep it evolving" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="FlowX | Generative Workflows for AI Agents" />
-    <meta name="twitter:description" content="Turn natural language into executable, inspectable, and evolving workflows; let your agent build the process, not just deliver an answer" />
+    <meta name="twitter:description" content="Turn natural language into executable, inspectable, and evolving workflows; install the FlowX skill or plugin for Claude Code, Codex, Hermes, and DeepSeek Harness" />
     <meta name="twitter:image" content="https://www.flow-x.work/assets/social-card.png" />
     <meta name="twitter:image:alt" content="FlowX: build the process and keep it evolving" />
     <script type="application/ld+json">
@@ -34,7 +34,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareSourceCode",
         "name": "FlowX",
-        "description": "An open-source generative workflow layer for AI agents, with MCP, Python SDK, and A2A interfaces",
+        "description": "An open-source generative workflow layer for AI agents, with MCP, Python SDK, A2A, agent skills, and a DeepSeek Harness plugin",
         "url": "https://www.flow-x.work/",
         "codeRepository": "https://github.com/AIpRoBuilder/FlowX",
         "programmingLanguage": "Python",
@@ -96,7 +96,7 @@
             <p class="hero-description">Generate, run, and evolve AI workflows from natural language; FlowX turns one-off answers into processes you can inspect, reuse, and improve</p>
             <div class="agent-prompt">
               <div class="prompt-header"><span>PROMPT FOR YOUR AGENT</span><button type="button" class="copy-button" data-copy-target="agent-prompt" data-copied="Copied" data-failed="Copy manually" aria-label="Copy the agent installation prompt"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div>
-              <p id="agent-prompt">Read https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md and https://github.com/AIpRoBuilder/FlowX#setup; install the skill for this agent and install and verify FlowX in a suitable Python 3.10+ virtual environment; connect local MCP if needed, guide me through secure LLM configuration, and show me how to create a workflow; do not ask for secrets in chat</p>
+              <p id="agent-prompt">Read https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md and https://github.com/AIpRoBuilder/FlowX#setup; install the FlowX skill for this agent with its native skill install command (see https://www.flow-x.work/#agent-install), or the DeepSeek Harness plugin if that is my host; install and verify FlowX in a suitable Python 3.10+ virtual environment; connect local MCP if needed, guide me through secure LLM configuration, and show me how to create a workflow; do not ask for secrets in chat</p>
               <span class="copy-result" role="status" aria-live="polite"></span>
             </div>
             <div class="hero-actions">
@@ -170,7 +170,7 @@
         <div class="container">
           <div class="section-intro split-intro">
             <div><p class="eyebrow"><span>03</span> / QUICKSTART</p><h2>Start here<br /><span class="text-gradient">Build your first workflow</span></h2></div>
-            <p class="section-lead">After installing FlowX, connect your agent with MCP or use the Python SDK directly; you'll need Python 3.10+ and a configured LLM provider</p>
+            <p class="section-lead">Install the skill or plugin for your agent, connect over MCP, or use the Python SDK directly; you'll need Python 3.10+ and a configured LLM provider</p>
           </div>
           <div class="quickstart-grid">
             <article class="code-card">
@@ -202,6 +202,44 @@ with FlowXClient(workspace="./workflows") as flowx:
               <p class="code-caption">Configure the model variables in the SDK's environment; building may execute node tests, so review the artifacts and code before running the service</p>
             </article>
           </div>
+          <div class="agent-install" id="agent-install">
+            <div class="agent-install-header">
+              <div><span class="card-index">03 / AGENT SKILL &amp; PLUGIN</span><h3>Install FlowX in your agent</h3><p>The FlowX skill teaches Claude Code, Codex, and Hermes Agent to build, inspect, and run workflows; DeepSeek Harness also gets a read-only workflow viewer plugin. The <code>npx</code> commands require Node.js 22.20+.</p></div>
+              <span class="interface-tag">SKILL + PLUGIN</span>
+            </div>
+            <div class="agent-grid">
+              <article class="agent-card">
+                <div class="agent-card-header"><span class="agent-name">Claude Code</span><span class="agent-meta">SKILL</span></div>
+                <div class="code-window"><div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="claude-install" data-copied="Copied" data-failed="Copy manually" aria-label="Copy Claude Code install command"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div><pre><code id="claude-install">npx skills add AIpRoBuilder/FlowX \
+  --skill flowx-workflows \
+  -a claude-code -g</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
+                <p class="agent-caption">Installs into <code>~/.claude/skills/</code>; omit <code>-g</code> for the current project.</p>
+              </article>
+              <article class="agent-card">
+                <div class="agent-card-header"><span class="agent-name">Codex</span><span class="agent-meta">SKILL</span></div>
+                <div class="code-window"><div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="codex-install" data-copied="Copied" data-failed="Copy manually" aria-label="Copy Codex install command"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div><pre><code id="codex-install">npx skills add AIpRoBuilder/FlowX \
+  --skill flowx-workflows \
+  -a codex -g</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
+                <p class="agent-caption">Installs into <code>~/.agents/skills/</code>; omit <code>-g</code> for the current project.</p>
+              </article>
+              <article class="agent-card">
+                <div class="agent-card-header"><span class="agent-name">Hermes Agent</span><span class="agent-meta">SKILL</span></div>
+                <div class="code-window"><div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="hermes-install" data-copied="Copied" data-failed="Copy manually" aria-label="Copy Hermes Agent install command"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div><pre><code id="hermes-install">hermes skills install \
+  AIpRoBuilder/FlowX/skills/flowx-workflows</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
+                <p class="agent-caption">Installs from the public GitHub repository; verify with <code>hermes skills list</code>, then start a new session.</p>
+              </article>
+              <article class="agent-card">
+                <div class="agent-card-header"><span class="agent-name">DeepSeek Harness</span><span class="agent-meta">SKILL + PLUGIN</span></div>
+                <div class="code-window"><div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="dsh-install" data-copied="Copied" data-failed="Copy manually" aria-label="Copy DeepSeek Harness install commands"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div><pre><code id="dsh-install"># Skill + viewer plugin (run from a FlowX checkout)
+mkdir -p ~/.dsh/skills/flowx-workflows
+cp -R skills/flowx-workflows/. \
+  ~/.dsh/skills/flowx-workflows/
+dsh plugin --profile web add \
+  ./plugins/deepseek-harness-flowx</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
+                <p class="agent-caption">Requires Harness 0.2.2-rc.1; use <code>--profile desktop</code> for Desktop, which installs separately from Web. Build, evolve, and run workflows with the skill.</p>
+              </article>
+            </div>
+          </div>
           <p class="quickstart-footer">Need configuration details? <a href="https://github.com/AIpRoBuilder/FlowX#setup" target="_blank" rel="noopener noreferrer">Read the full setup guide ↗</a></p>
         </div>
       </section>
@@ -227,7 +265,7 @@ with FlowXClient(workspace="./workflows") as flowx:
           <div class="start-list">
             <div class="start-item"><span>01</span><div><h3>Prepare your environment</h3><p>You'll need Python 3.10+ and an OpenAI-compatible model provider</p></div></div>
             <div class="start-item"><span>02</span><div><h3>Install FlowX</h3><p>One installation includes the shared core, MCP, Python SDK, and A2A adapter</p></div></div>
-            <div class="start-item"><span>03</span><div><h3>Configure and connect</h3><p>Configure your model, API key, and workspace, then choose an interface</p></div></div>
+            <div class="start-item"><span>03</span><div><h3>Install and connect</h3><p>Install the skill or plugin, configure your model, API key, and workspace, then choose an interface</p></div></div>
             <div class="start-item"><span>04</span><div><h3>Build and evolve</h3><p>Describe your requirements, inspect the build, and keep improving your workflow</p></div></div>
           </div>
         </div>
@@ -240,7 +278,7 @@ with FlowXClient(workspace="./workflows") as flowx:
             <details><summary>Is FlowX a visual workflow editor?<span aria-hidden="true">+</span></summary><p>No; FlowX is a generative workflow layer and does not include a user interface; your agent or application handles interaction and presentation, while FlowX generates, runs, and evolves the process behind it</p></details>
             <details><summary>Where are generated workflows stored?<span aria-hidden="true">+</span></summary><p>Workflow artifacts are stored in your configured local workspace, including the workflow graph, node code, and backend entry point; you can inspect and evolve them later</p></details>
             <details><summary>What happens when a node fails its test?<span aria-hidden="true">+</span></summary><p>Node building includes audit, testing, and bounded repair; you can provide repair guidance when needed, and nodes that still fail are not published</p></details>
-            <details><summary>How can I connect to FlowX?<span aria-hidden="true">+</span></summary><p>FlowX supports local stdio MCP, a Python SDK, and an A2A adapter; the A2A adapter currently supports non-streaming workflow building</p></details>
+            <details><summary>How can I connect to FlowX?<span aria-hidden="true">+</span></summary><p>FlowX supports local stdio MCP, a Python SDK, an A2A adapter, and an agent skill for Claude Code, Codex, and Hermes Agent; DeepSeek Harness also has a read-only viewer plugin. The A2A adapter currently supports non-streaming workflow building.</p></details>
           </div>
         </div>
       </section>

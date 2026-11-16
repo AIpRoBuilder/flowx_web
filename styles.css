@@ -162,6 +162,22 @@ h2 { margin-bottom: 0; font-size: clamp(2.05rem, 3.2vw, 3.15rem); line-height: 1
 .code-window pre { max-width: 100%; margin: 0; padding: 20px 16px; overflow-x: auto; color: #d3d5dc; font: .76rem/1.8 "SFMono-Regular", Consolas, monospace; tab-size: 2; }
 .code-caption { margin: 16px 0 0; }
 .code-caption code { color: #edbd89; font-family: "SFMono-Regular", Consolas, monospace; }
+.agent-install { margin-top: 16px; border: 1px solid var(--border); background: rgba(16, 18, 23, .96); }
+.agent-install-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; padding: 28px; border-bottom: 1px solid var(--border); }
+.agent-install-header > div { max-width: 760px; }
+.agent-install-header h3 { margin-bottom: 10px; font-size: 1.18rem; }
+.agent-install-header p { margin: 0; color: var(--muted); font-size: .85rem; line-height: 1.8; }
+.agent-install-header .interface-tag { margin-top: 0; }
+.agent-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.agent-card { min-width: 0; padding: 24px 28px 26px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.agent-card:nth-child(2n) { border-right: 0; }
+.agent-card:nth-last-child(-n + 2) { border-bottom: 0; }
+.agent-card-header { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; margin-bottom: 14px; }
+.agent-name { font-size: .95rem; font-weight: 650; }
+.agent-meta { color: #7d838d; font: 600 .6rem "SFMono-Regular", Consolas, monospace; letter-spacing: .1em; text-align: right; }
+.agent-card .code-window pre { padding: 16px; font-size: .72rem; }
+.agent-caption { margin: 12px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.7; }
+.agent-caption code { color: #edbd89; font-family: "SFMono-Regular", Consolas, monospace; }
 .quickstart-footer { margin: 24px 0 0; color: var(--muted); font-size: .85rem; line-height: 1.7; }
 .quickstart-footer a { color: #f1bd86; }
 .quickstart-footer a:hover { color: #ffdaab; }
@@ -240,6 +256,11 @@ h2 { margin-bottom: 0; font-size: clamp(2.05rem, 3.2vw, 3.15rem); line-height: 1
   .quickstart-grid { grid-template-columns: 1fr; }
   .code-card-intro { min-height: 0; }
   .code-card-intro p { margin-bottom: 24px; }
+  .agent-install-header { flex-direction: column; gap: 16px; padding: 24px; }
+  .agent-grid { grid-template-columns: 1fr; }
+  .agent-card { border-right: 0; }
+  .agent-card:nth-last-child(-n + 2) { border-bottom: 1px solid var(--border); }
+  .agent-card:last-child { border-bottom: 0; }
   .start-list { margin-top: 20px; }
   .faq-list { margin-top: 15px; }
   .contact-inner { padding-block: 75px; }
@@ -262,6 +283,8 @@ h2 { margin-bottom: 0; font-size: clamp(2.05rem, 3.2vw, 3.15rem); line-height: 1
   .feature-grid { grid-template-columns: 1fr; }
   .feature-card { min-height: 0; padding: 25px; }
   .code-card { padding: 20px; }
+  .agent-install-header { padding: 20px; }
+  .agent-card { padding: 20px; }
   .feature-icon { margin-bottom: 25px; }
   .process-step { padding: 25px 18px; }
   .process-step p { font-size: .8rem; }

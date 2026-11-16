@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="z1j2lOwTCyCSmdxdT_rCZAdQoIIs76KouPiEtdd7D3k" />
     <meta name="baidu-site-verification" content="codeva-i7WjuOg6xc" />
     <title>FlowX | 为 AI Agent 而生的生成式工作流</title>
-    <meta name="description" content="FlowX 是面向 AI Agent 的开源生成式工作流层，用自然语言生成、运行并持续演进可复用的工作流，支持 MCP、Python SDK 和 A2A" />
+    <meta name="description" content="FlowX 是面向 AI Agent 的开源生成式工作流层，用自然语言生成、运行并持续演进可复用的工作流，支持 MCP、Python SDK、A2A，以及 Claude Code、Codex、Hermes 和 DeepSeek Harness 的 skill 与插件" />
     <link rel="canonical" href="https://www.flow-x.work/index.zh-CN.html" />
     <link rel="alternate" hreflang="en" href="https://www.flow-x.work/" />
     <link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/index.zh-CN.html" />
@@ -18,7 +18,7 @@
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:title" content="FlowX | 为 AI Agent 而生的生成式工作流" />
-    <meta property="og:description" content="从自然语言到可执行、可检查、可演进的工作流，让你的 Agent 不止给出答案，更能构建完成任务的过程" />
+    <meta property="og:description" content="从自然语言到可执行、可检查、可演进的工作流；为 Claude Code、Codex、Hermes 和 DeepSeek Harness 安装 FlowX skill 或插件" />
     <meta property="og:image" content="https://www.flow-x.work/assets/social-card.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
@@ -26,7 +26,7 @@
     <meta property="og:image:alt" content="FlowX：构建可持续演进的执行过程" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="FlowX | 为 AI Agent 而生的生成式工作流" />
-    <meta name="twitter:description" content="从自然语言到可执行、可检查、可演进的工作流，让你的 Agent 不止给出答案，更能构建完成任务的过程" />
+    <meta name="twitter:description" content="从自然语言到可执行、可检查、可演进的工作流；为 Claude Code、Codex、Hermes 和 DeepSeek Harness 安装 FlowX skill 或插件" />
     <meta name="twitter:image" content="https://www.flow-x.work/assets/social-card.png" />
     <meta name="twitter:image:alt" content="FlowX：构建可持续演进的执行过程" />
     <script type="application/ld+json">
@@ -34,7 +34,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareSourceCode",
         "name": "FlowX",
-        "description": "面向 AI Agent 的开源生成式工作流层，支持 MCP、Python SDK 和 A2A",
+        "description": "面向 AI Agent 的开源生成式工作流层，支持 MCP、Python SDK、A2A，以及 Claude Code、Codex、Hermes 和 DeepSeek Harness 的 skill 与插件",
         "url": "https://www.flow-x.work/index.zh-CN.html",
         "codeRepository": "https://github.com/AIpRoBuilder/FlowX",
         "programmingLanguage": "Python",
@@ -96,7 +96,7 @@
             <p class="hero-description">从一句自然语言出发，生成、运行并持续演进 AI 工作流，FlowX 将一次性的回答变成可以检查、复用和改进的执行过程</p>
             <div class="agent-prompt">
               <div class="prompt-header"><span>给你的 AGENT 的指令</span><button type="button" class="copy-button" data-copy-target="agent-prompt" data-copied="已复制" data-failed="请手动复制" aria-label="复制 Agent 安装指令"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div>
-              <p id="agent-prompt">请阅读 https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md 和 https://github.com/AIpRoBuilder/FlowX#setup，为当前 Agent 安装该 skill，并在合适的 Python 3.10+ 虚拟环境中安装、验证 FlowX；按需连接本地 MCP，指导我安全配置 LLM 并创建工作流；不要在聊天中索取密钥</p>
+              <p id="agent-prompt">请阅读 https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md 和 https://github.com/AIpRoBuilder/FlowX#setup，使用当前 Agent 的原生方式安装 FlowX skill（命令见 https://www.flow-x.work/index.zh-CN.html#agent-install；若使用 DeepSeek Harness 则安装其插件），并在合适的 Python 3.10+ 虚拟环境中安装、验证 FlowX；按需连接本地 MCP，指导我安全配置 LLM 并创建工作流；不要在聊天中索取密钥</p>
               <span class="copy-result" role="status" aria-live="polite"></span>
             </div>
             <div class="hero-actions">
@@ -170,7 +170,7 @@
         <div class="container">
           <div class="section-intro split-intro">
             <div><p class="eyebrow"><span>03</span> / QUICKSTART</p><h2>从这里开始，<br /><span class="text-gradient">构建你的第一个流程</span></h2></div>
-            <p class="section-lead">安装 FlowX 后，选择 MCP 连接你的 Agent，或直接使用 Python SDK；需要 Python 3.10+ 和已配置的 LLM 服务</p>
+            <p class="section-lead">为你的 Agent 安装 skill 或插件，选择 MCP 连接，或直接使用 Python SDK；需要 Python 3.10+ 和已配置的 LLM 服务</p>
           </div>
           <div class="quickstart-grid">
             <article class="code-card">
@@ -202,6 +202,44 @@ with FlowXClient(workspace="./workflows") as flowx:
               <p class="code-caption">在运行 SDK 的环境中配置模型变量，构建期间可能执行节点测试；运行生成的服务前，请审阅产物和代码</p>
             </article>
           </div>
+          <div class="agent-install" id="agent-install">
+            <div class="agent-install-header">
+              <div><span class="card-index">03 / AGENT SKILL &amp; PLUGIN</span><h3>安装到你的 Agent</h3><p>FlowX skill 让 Claude Code、Codex 和 Hermes Agent 能够构建、检查和运行工作流；DeepSeek Harness 还可安装只读工作流查看器插件。<code>npx</code> 命令需要 Node.js 22.20+。</p></div>
+              <span class="interface-tag">SKILL + PLUGIN</span>
+            </div>
+            <div class="agent-grid">
+              <article class="agent-card">
+                <div class="agent-card-header"><span class="agent-name">Claude Code</span><span class="agent-meta">SKILL</span></div>
+                <div class="code-window"><div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="claude-install" data-copied="已复制" data-failed="请手动复制" aria-label="复制 Claude Code 安装命令"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div><pre><code id="claude-install">npx skills add AIpRoBuilder/FlowX \
+  --skill flowx-workflows \
+  -a claude-code -g</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
+                <p class="agent-caption">安装到 <code>~/.claude/skills/</code>；去掉 <code>-g</code> 可只安装到当前项目。</p>
+              </article>
+              <article class="agent-card">
+                <div class="agent-card-header"><span class="agent-name">Codex</span><span class="agent-meta">SKILL</span></div>
+                <div class="code-window"><div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="codex-install" data-copied="已复制" data-failed="请手动复制" aria-label="复制 Codex 安装命令"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div><pre><code id="codex-install">npx skills add AIpRoBuilder/FlowX \
+  --skill flowx-workflows \
+  -a codex -g</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
+                <p class="agent-caption">安装到 <code>~/.agents/skills/</code>；去掉 <code>-g</code> 可只安装到当前项目。</p>
+              </article>
+              <article class="agent-card">
+                <div class="agent-card-header"><span class="agent-name">Hermes Agent</span><span class="agent-meta">SKILL</span></div>
+                <div class="code-window"><div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="hermes-install" data-copied="已复制" data-failed="请手动复制" aria-label="复制 Hermes Agent 安装命令"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div><pre><code id="hermes-install">hermes skills install \
+  AIpRoBuilder/FlowX/skills/flowx-workflows</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
+                <p class="agent-caption">从公开 GitHub 仓库安装；可用 <code>hermes skills list</code> 验证，然后新建会话。</p>
+              </article>
+              <article class="agent-card">
+                <div class="agent-card-header"><span class="agent-name">DeepSeek Harness</span><span class="agent-meta">SKILL + PLUGIN</span></div>
+                <div class="code-window"><div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="dsh-install" data-copied="已复制" data-failed="请手动复制" aria-label="复制 DeepSeek Harness 安装命令"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div><pre><code id="dsh-install"># 安装 skill 和只读查看器插件（在 FlowX 仓库根目录运行）
+mkdir -p ~/.dsh/skills/flowx-workflows
+cp -R skills/flowx-workflows/. \
+  ~/.dsh/skills/flowx-workflows/
+dsh plugin --profile web add \
+  ./plugins/deepseek-harness-flowx</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
+                <p class="agent-caption">需要 Harness 0.2.2-rc.1；Desktop 使用 <code>--profile desktop</code>，与 Web 分别安装。使用 skill 构建、演进和运行工作流。</p>
+              </article>
+            </div>
+          </div>
           <p class="quickstart-footer">需要配置细节？<a href="https://github.com/AIpRoBuilder/FlowX/blob/main/README.zh-CN.md" target="_blank" rel="noopener noreferrer">查看完整安装文档 ↗</a></p>
         </div>
       </section>
@@ -227,7 +265,7 @@ with FlowXClient(workspace="./workflows") as flowx:
           <div class="start-list">
             <div class="start-item"><span>01</span><div><h3>准备环境</h3><p>Python 3.10+，以及兼容 OpenAI API 的模型服务</p></div></div>
             <div class="start-item"><span>02</span><div><h3>安装 FlowX</h3><p>安装包含共享核心、MCP、Python SDK 和 A2A 适配器</p></div></div>
-            <div class="start-item"><span>03</span><div><h3>配置并连接</h3><p>配置模型、密钥和工作区，选择适合你的接口接入</p></div></div>
+            <div class="start-item"><span>03</span><div><h3>安装并连接</h3><p>安装 skill 或插件，配置模型、密钥和工作区，选择适合你的接口接入</p></div></div>
             <div class="start-item"><span>04</span><div><h3>构建与演进</h3><p>描述需求，检查构建结果，运行并持续改进工作流</p></div></div>
           </div>
         </div>
@@ -240,7 +278,7 @@ with FlowXClient(workspace="./workflows") as flowx:
             <details><summary>FlowX 是一个可视化工作流编辑器吗？<span aria-hidden="true">+</span></summary><p>不是，FlowX 是生成式工作流层，不自带用户界面；你的 Agent 或应用负责交互和展示，FlowX 负责生成、运行和演进背后的流程</p></details>
             <details><summary>工作流生成后保存在哪里？<span aria-hidden="true">+</span></summary><p>工作流产物保存在配置的本地工作区中，包括工作流图、节点代码和后端入口，可供检查和后续演进</p></details>
             <details><summary>节点测试没有通过怎么办？<span aria-hidden="true">+</span></summary><p>节点构建包含审计、测试和有限次数的修复，需要时可以提供修改指导；仍未通过的节点不会发布</p></details>
-            <details><summary>FlowX 支持哪些接入方式？<span aria-hidden="true">+</span></summary><p>支持本地 stdio MCP、Python SDK 和 A2A 适配器，其中 A2A 当前用于非流式工作流构建</p></details>
+            <details><summary>FlowX 支持哪些接入方式？<span aria-hidden="true">+</span></summary><p>支持本地 stdio MCP、Python SDK、A2A 适配器，以及面向 Claude Code、Codex 和 Hermes Agent 的 skill；DeepSeek Harness 还可安装只读查看器插件。A2A 当前用于非流式工作流构建</p></details>
           </div>
         </div>
       </section>
