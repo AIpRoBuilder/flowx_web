@@ -43,6 +43,10 @@ for (const page of [
       only(tags(head, 'meta').filter((item) => item.name === 'google-site-verification'), 'Google site verification').content,
       'z1j2lOwTCyCSmdxdT_rCZAdQoIIs76KouPiEtdd7D3k'
     );
+    assert.equal(
+      only(tags(head, 'meta').filter((item) => item.name === 'baidu-site-verification'), 'Baidu site verification').content,
+      'codeva-i7WjuOg6xc'
+    );
     assert.equal(only(links.filter((item) => item.rel === 'canonical'), 'canonical link').href, page.url);
     const languageLinks = links.filter((item) => item.rel === 'alternate' && item.hreflang);
     assert.equal(languageLinks.length, Object.keys(alternates).length);
