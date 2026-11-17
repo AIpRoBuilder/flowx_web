@@ -11,6 +11,7 @@ const alternates = {
   'x-default': site,
 };
 const imageUrl = `${site}assets/social-card.png`;
+const demoUrl = `${site}assets/picture-workflow-demo.html`;
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 
 function tags(source, name) {
@@ -46,6 +47,10 @@ for (const page of [
     assert.equal(
       only(tags(head, 'meta').filter((item) => item.name === 'baidu-site-verification'), 'Baidu site verification').content,
       'codeva-i7WjuOg6xc'
+    );
+    assert.equal(
+      only(tags(head, 'meta').filter((item) => item.name === 'yandex-verification'), 'Yandex site verification').content,
+      'f1fecc89b8e0a217'
     );
     assert.equal(only(links.filter((item) => item.rel === 'canonical'), 'canonical link').href, page.url);
     const languageLinks = links.filter((item) => item.rel === 'alternate' && item.hreflang);
@@ -90,9 +95,12 @@ test('social preview is a 1200 by 630 PNG', () => {
 test('sitemap lists canonical pages with reciprocal language links', () => {
   const sitemap = read('sitemap.xml');
   const entries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => match[1]);
-  assert.equal(entries.length, 2);
-  assert.deepEqual(entries.map((entry) => entry.match(/<loc>(.*?)<\/loc>/)?.[1]), [site, alternates['zh-CN']]);
-  for (const entry of entries) {
+  assert.equal(entries.length, 3);
+  assert.deepEqual(
+    entries.map((entry) => entry.match(/<loc>(.*?)<\/loc>/)?.[1]),
+    [site, alternates['zh-CN'], demoUrl]
+  );
+  for (const entry of entries.slice(0, 2)) {
     const languageLinks = tags(entry, 'xhtml:link');
     assert.equal(languageLinks.length, Object.keys(alternates).length);
     for (const [language, url] of Object.entries(alternates)) {
@@ -100,6 +108,40 @@ test('sitemap lists canonical pages with reciprocal language links', () => {
       assert.equal(link.rel, 'alternate');
       assert.equal(link.href, url);
     }
+  }
+  assert.equal(tags(entries[2], 'xhtml:link').length, 0, 'example page is English-only');
+});
+
+test('homepages point to the interactive picture workflow example', () => {
+  for (const file of ['index.html', 'index.zh-CN.html']) {
+    const html = read(file);
+    assert.match(html, /<section class="section examples-section" id="examples">/);
+    assert.match(html, /<a href="#examples">/);
+    const links = tags(html, 'a').filter((item) => item.href === 'assets/picture-workflow-demo.html');
+    assert.equal(only(links, `${file} example link`).class, 'example-card');
+  }
+});
+
+test('example page has its own canonical and share metadata', () => {
+  const html = read('assets/picture-workflow-demo.html');
+  const links = tags(html, 'link');
+  const metas = tags(html, 'meta');
+  assert.equal(only(links.filter((item) => item.rel === 'canonical'), 'example canonical').href, demoUrl);
+  assert.ok(metas.some((item) => item.name === 'description'));
+  assert.equal(
+    only(metas.filter((item) => item.name === 'yandex-verification'), 'example Yandex verification').content,
+    'f1fecc89b8e0a217'
+  );
+  assert.equal(only(metas.filter((item) => item.property === 'og:url'), 'example og:url').content, demoUrl);
+});
+
+test('example preview GIF is published and used by both homepages', () => {
+  const gif = fs.readFileSync(path.join(root, 'assets/picture-workflow-demo.gif'));
+  assert.equal(gif.subarray(0, 6).toString('ascii'), 'GIF89a');
+  assert.equal(gif.readUInt16LE(6), 1024);
+  assert.equal(gif.readUInt16LE(8), 720);
+  for (const file of ['index.html', 'index.zh-CN.html']) {
+    assert.match(read(file), /src="assets\/picture-workflow-demo\.gif"/);
   }
 });
 

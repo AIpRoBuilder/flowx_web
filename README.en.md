@@ -20,7 +20,7 @@ The default host port is 8080. The site consists of `index.html`, `index.zh-CN.h
 
 ## Search and sharing
 
-The canonical site is <https://www.flow-x.work/>. Both language pages include canonical and language-alternate links, social sharing metadata, and structured data. The sitemap lists only the canonical English and Chinese pages; the old English URL redirects to the homepage.
+The canonical site is <https://www.flow-x.work/>. Both language homepages include canonical and language-alternate links, social sharing metadata, and structured data. The examples section links to the interactive demo at `assets/picture-workflow-demo.html`; the sitemap lists the canonical English and Chinese homepages plus that English-only example; the old English URL redirects to the homepage.
 
 Search engines only read `robots.txt` from the domain root. When deployed at the root of the custom domain, the included file declares the sitemap URL. Submit <https://www.flow-x.work/sitemap.xml> in your search engine's webmaster tools.
 

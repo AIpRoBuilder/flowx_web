@@ -12,4 +12,7 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/index.zh-CN.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/" />
   </url>
+  <url>
+    <loc>https://www.flow-x.work/assets/picture-workflow-demo.html</loc>
+  </url>
 </urlset>
