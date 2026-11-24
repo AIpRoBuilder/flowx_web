@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b0f" />
+    <meta name="google-site-verification" content="z1j2lOwTCyCSmdxdT_rCZAdQoIIs76KouPiEtdd7D3k" />
+    <meta name="baidu-site-verification" content="codeva-i7WjuOg6xc" />
+    <meta name="yandex-verification" content="f1fecc89b8e0a217" />
+    <title>手册 | 安装并运行 FlowX</title>
+    <meta name="description" content="FlowX 手册：安装、配置工作区、注册 MCP 服务、安装 Agent skill、构建第一个工作流、使用 Python SDK 或 A2A，并了解架构和安全边界" />
+    <link rel="canonical" href="https://www.flow-x.work/manual.zh-CN.html" />
+    <link rel="alternate" hreflang="en" href="https://www.flow-x.work/manual.html" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/manual.zh-CN.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/manual.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="FlowX" />
+    <meta property="og:url" content="https://www.flow-x.work/manual.zh-CN.html" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="手册 | 安装并运行 FlowX" />
+    <meta property="og:description" content="安装 FlowX、注册 MCP 服务、安装 Agent skill、构建第一个工作流，并检查构建留下的产物。" />
+    <meta property="og:image" content="https://www.flow-x.work/assets/social-card.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FlowX：构建可持续演进的执行过程" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="手册 | 安装并运行 FlowX" />
+    <meta name="twitter:description" content="安装 FlowX、注册 MCP 服务、安装 Agent skill、构建第一个工作流，并检查构建留下的产物。" />
+    <meta name="twitter:image" content="https://www.flow-x.work/assets/social-card.png" />
+    <meta name="twitter:image:alt" content="FlowX：构建可持续演进的执行过程" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "FlowX 手册",
+        "description": "安装 FlowX、注册 MCP 服务、安装 Agent skill、构建第一个工作流，并检查构建留下的产物。",
+        "url": "https://www.flow-x.work/manual.zh-CN.html",
+        "inLanguage": "zh-CN",
+        "isPartOf": { "@type": "WebSite", "name": "FlowX", "url": "https://www.flow-x.work/" }
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="assets/flowx-mark.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳转到主要内容</a>
+
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="index.zh-CN.html" aria-label="FlowX 首页">
+          <img src="assets/flowx-mark.svg" alt="" width="34" height="34" />
+          <span>Flow<span class="brand-x">X</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="why.zh-CN.html">为什么是 FlowX</a>
+          <a href="tools.zh-CN.html">工具面</a>
+          <a href="showcase.zh-CN.html">案例</a>
+          <a href="manual.zh-CN.html" aria-current="page">手册</a>
+        </nav>
+
+        <div class="header-actions">
+          <nav class="language-switch" aria-label="选择语言">
+            <a href="manual.zh-CN.html" lang="zh-CN" hreflang="zh-CN" aria-current="page">中</a><span aria-hidden="true">/</span><a href="manual.html" lang="en" hreflang="en">EN</a>
+          </nav>
+          <a class="header-github" href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="button button-small button-light" href="#install">开始构建 <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="mobile-menu">
+          <summary aria-label="打开导航菜单"><span></span><span></span></summary>
+          <nav aria-label="移动端导航">
+            <a href="why.zh-CN.html">为什么是 FlowX</a>
+            <a href="tools.zh-CN.html">工具面</a>
+            <a href="showcase.zh-CN.html">案例</a>
+            <a href="manual.zh-CN.html" aria-current="page">手册</a>
+            <a href="#install">开始构建</a>
+            <a href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <div class="mobile-languages" aria-label="选择语言"><a href="manual.zh-CN.html" lang="zh-CN" hreflang="zh-CN" aria-current="page">简体中文</a><a href="manual.html" lang="en" hreflang="en">English ↗</a></div>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero" id="top">
+        <div class="container page-hero-inner">
+          <p class="page-kicker"><a href="index.zh-CN.html">FLOWX</a> <span aria-hidden="true">/</span> 手册</p>
+          <h1>从克隆代码<br /><span>到第一次完整构建</span></h1>
+          <p class="section-lead">本地运行 FlowX 需要的一切：前置条件、安装、工作区配置、MCP 注册、Agent skill、第一次构建、SDK、A2A，以及围绕生成代码的安全边界。</p>
+          <div class="page-actions">
+            <a class="button button-primary" href="#install">开始安装 <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://github.com/AIpRoBuilder/FlowX/blob/main/README.zh-CN.md#setup" target="_blank" rel="noopener noreferrer">官方 README <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="page-meta"><span><strong>PYTHON 3.10+</strong></span><span><strong>APACHE 2.0</strong></span><span><strong>无需模型密钥</strong></span><span><strong>本地优先</strong></span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container manual-layout">
+          <nav class="manual-nav" aria-label="手册目录" data-manual-nav>
+            <a href="#requirements">前置条件</a>
+            <a href="#install">安装</a>
+            <a href="#configure">配置</a>
+            <a href="#mcp">注册 MCP</a>
+            <a href="#agent-skill">Agent skill</a>
+            <a href="#first-build">第一次构建</a>
+            <a href="#sdk">Python SDK</a>
+            <a href="#a2a">A2A</a>
+            <a href="#architecture">架构</a>
+            <a href="#guardrails">安全边界</a>
+          </nav>
+
+          <div class="manual-content">
+            <section class="manual-block" id="requirements">
+              <p class="eyebrow"><span>01</span> / 前置条件</p>
+              <h2>你需要什么</h2>
+              <ul>
+                <li>Python 3.10 或更高版本。</li>
+                <li>Git，用于获取 FlowX 及其工作流运行时依赖。</li>
+                <li>一个支持 MCP 的编码 Agent，或你自己的 Python / A2A Agent，用来编写 FlowX 请求的产物。</li>
+              </ul>
+              <p>FlowX 不调用模型。它把每个产物的契约交给 Agent，审计并测试返回结果，发布版本化节点，渲染 FastAPI 服务并运行它。</p>
+              <div class="manual-note"><strong>不需要密钥：</strong>Provider 和媒体变量只在你生成的工作流调用模型或媒体服务时才需要。请放在进程环境或工作流服务自己的 <code>.env</code> 中。</div>
+            </section>
+
+            <section class="manual-block" id="install">
+              <p class="eyebrow"><span>02</span> / 安装</p>
+              <h2>克隆并安装</h2>
+              <p>一次安装包含共享核心、MCP 服务、Python SDK 和 A2A 适配器。</p>
+              <div class="code-window">
+                <div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="manual-install" data-copied="已复制" data-failed="请手动复制" aria-label="复制安装命令"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div>
+                <pre><code id="manual-install">git clone https://github.com/AIpRoBuilder/FlowX.git
+cd FlowX
+python3.10 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e .</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <p>项目也支持 Poetry、uv 和 conda。Poetry：<code>poetry env use python3.10</code> 和 <code>poetry install</code>；uv：<code>uv sync</code>；conda：<code>conda env create -f environment.yml</code>。</p>
+            </section>
+
+            <section class="manual-block" id="configure">
+              <p class="eyebrow"><span>03</span> / 配置</p>
+              <h2>指定工作区</h2>
+              <p>复制示例环境文件，并设置工作流和产物所在的工作区。</p>
+              <div class="code-window">
+                <div class="code-header"><span>.env</span><button type="button" class="copy-button" data-copy-target="manual-env" data-copied="已复制" data-failed="请手动复制" aria-label="复制环境变量示例"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div>
+                <pre><code id="manual-env">cp .env.example .env
+
+# .env
+FLOWX_DEFAULT_WORKSPACE=./.flowx_workspaces</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <p><code>FLOWX_CONFIG_ROOT</code> 可让已安装的 <code>flowx-mcp</code> 找到仓库外的 <code>.env</code>。<code>FLOWX_EXTRA_PATHS</code> 可在当前环境未安装 <code>ag_ui_workflow</code> 时指向本地源码。</p>
+              <p>SDK 和 A2A 服务读取进程环境变量，不会自动加载这个 <code>.env</code>。请在创建客户端前导出设置或加载文件：<code>set -a; source .env; set +a</code>。</p>
+            </section>
+
+            <section class="manual-block" id="mcp">
+              <p class="eyebrow"><span>04</span> / MCP</p>
+              <h2>注册本地服务</h2>
+              <p>先检查入口，再把虚拟环境中 <code>flowx-mcp</code> 的绝对路径注册到 MCP 客户端。</p>
+              <div class="code-window">
+                <div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="manual-mcp-run" data-copied="已复制" data-failed="请手动复制" aria-label="复制 MCP 服务命令"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div>
+                <pre><code id="manual-mcp-run">flowx-mcp            # 本地 stdio 入口
+flowx-mcp --verbose  # 详细日志
+python3.10 run_server.py  # 源码检出入口</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <div class="code-window">
+                <div class="code-header"><span>mcp.json</span><button type="button" class="copy-button" data-copy-target="manual-mcp" data-copied="已复制" data-failed="请手动复制" aria-label="复制 MCP 配置"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div>
+                <pre><code id="manual-mcp">{
+  "mcpServers": {
+    "flowx": {
+      "command": "/absolute/path/to/your/venv/bin/flowx-mcp",
+      "env": {
+        "FLOWX_DEFAULT_WORKSPACE": "/absolute/path/to/flowx_workspaces"
+      }
+    }
+  }
+}</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <p>MCP 主机可能不会继承 Shell 的 <code>PATH</code>。请使用绝对路径，并按客户端的安全建议保存工作流凭据。</p>
+            </section>
+
+            <section class="manual-block" id="agent-skill">
+              <p class="eyebrow"><span>05</span> / AGENT SKILL</p>
+              <h2>教会宿主使用整个循环</h2>
+              <p><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md" target="_blank" rel="noopener noreferrer">FlowX skill</a> 会引导兼容的编码 Agent 构建、检查、修复、运行和演进工作流。安装 skill 只复制指令和脚本，不包含 SDK；注册 MCP 是另一个步骤。</p>
+              <div class="manual-split">
+                <div class="manual-mini"><h3>Claude Code</h3><p><code>npx skills add AIpRoBuilder/FlowX --skill flowx-workflows -a claude-code -g</code></p></div>
+                <div class="manual-mini"><h3>Codex</h3><p><code>npx skills add AIpRoBuilder/FlowX --skill flowx-workflows -a codex -g</code></p></div>
+                <div class="manual-mini"><h3>Hermes Agent</h3><p><code>hermes skills install AIpRoBuilder/FlowX/skills/flowx-workflows</code></p></div>
+                <div class="manual-mini"><h3>VS Code / Copilot</h3><p><code>mkdir -p ~/.copilot/skills/flowx-workflows</code>，再把 <code>skills/flowx-workflows/.</code> 复制进去。</p></div>
+              </div>
+              <p>DeepSeek Harness 还提供只读查看器插件，需要在 FlowX 检出目录中单独运行 <code>dsh plugin --profile web add ./plugins/deepseek-harness-flowx</code> 安装。构建、演进和运行工作流使用 skill。</p>
+            </section>
+
+            <section class="manual-block" id="first-build">
+              <p class="eyebrow"><span>06</span> / 第一次构建</p>
+              <h2>描述、提交、检查</h2>
+              <p>配置完成后，让支持 MCP 的 Agent 构建一个具体任务。FlowX 会分配工作流、返回契约包，并检查每个产物。</p>
+              <div class="code-window">
+                <div class="code-header"><span>PROMPT</span><button type="button" class="copy-button" data-copy-target="manual-prompt" data-copied="已复制" data-failed="请手动复制" aria-label="复制第一个工作流提示词"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div>
+                <pre><code id="manual-prompt">Use flowx to build a workflow.
+
+Build a workflow that accepts a support ticket, classifies its
+category, assigns a priority, and drafts a reply. Name the reply
+node draft_reply. Return the category, priority, and draft reply
+as structured output.</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <h3>接下来会发生什么</h3>
+              <ul>
+                <li><code>create_workflow</code> 分配目录和 <code>workflow_id</code>。</li>
+                <li><code>begin_build</code> 打开修订，并返回每个产物的契约 <code>next_tasks</code>。</li>
+                <li>Agent 依次提交需求、图，然后为每个节点提交一对代码和测试。</li>
+                <li>拒绝会返回规则、行号、修复建议和修复任务；<code>max_attempts</code> 有上限。</li>
+                <li><code>get_build_state</code> 和 <code>get_build_events</code> 显示阶段、节点状态、下一步和日志。</li>
+              </ul>
+              <p>构建状态保存在 MCP 服务进程和 <code>build/events.jsonl</code> 中。服务重启后再次调用 <code>begin_build</code>：已发布节点会复用，只请求未完成的工作。</p>
+            </section>
+
+            <section class="manual-block" id="sdk">
+              <p class="eyebrow"><span>07</span> / PYTHON SDK</p>
+              <h2>嵌入构建器</h2>
+              <p>当自己的 Python Agent 或应用后端需要在不使用 MCP 传输的情况下回答契约时，使用 SDK。</p>
+              <div class="code-window">
+                <div class="code-header"><span>python</span><button type="button" class="copy-button" data-copy-target="manual-sdk" data-copied="已复制" data-failed="请手动复制" aria-label="复制 Python SDK 示例"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div>
+                <pre><code id="manual-sdk">from flowx_sdk import FlowXClient
+
+def solve(task: dict) -&gt; dict:
+    # contract、context、meta 和 submit.slots 说明要写什么。
+    return my_agent.write(task)
+
+with FlowXClient(workspace="./workflows") as flowx:
+    workflow_id = flowx.create_workflow("ticket-triage")
+    state = flowx.build(workflow_id, "Categorize support tickets.", solve)
+    assert state["status"] == "completed", state["errors"]
+    print(flowx.run_service(workflow_id))
+    input("Press Enter to stop the service... ")</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <p>使用服务时保持客户端开启；退出 <code>with</code> 块会停止它启动的服务并中止未完成的构建，已发布版本会保留。需要更细的控制时，直接调用 <code>begin_build</code>、<code>get_tasks</code>、<code>submit_task</code>、<code>get_build_state</code>、<code>get_build_events</code>、<code>reopen_stage</code> 和 <code>abort_build</code>。</p>
+            </section>
+
+            <section class="manual-block" id="a2a">
+              <p class="eyebrow"><span>08</span> / A2A</p>
+              <h2>让另一个 Agent 委托</h2>
+              <p>启动非流式 A2A 适配器，让对等 Agent 连接。一次构建就是一个 A2A 任务；契约任务未完成时，任务状态为 <code>input-required</code>。</p>
+              <div class="code-window">
+                <div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="manual-a2a" data-copied="已复制" data-failed="请手动复制" aria-label="复制 A2A 命令"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div>
+                <pre><code id="manual-a2a">flowx-a2a --host 127.0.0.1 --port 8001</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <p>Agent card 位于 <code>/.well-known/agent-card.json</code>，JSON-RPC 位于 <code>/a2a</code>。支持 <code>message/send</code>、<code>tasks/get</code> 和 <code>tasks/cancel</code>。</p>
+            </section>
+
+            <section class="manual-block" id="architecture">
+              <p class="eyebrow"><span>09</span> / 架构</p>
+              <h2>两个实体，三种接入方式</h2>
+              <p><code>flowx_core.builder</code>（<strong>WorkflowBuilder</strong>）发放契约，用审计器和 pytest 验证返回结果，发布版本并渲染服务。<code>flowx_core.service</code>（<strong>ServiceManager</strong>）运行并驱动结果。<code>flowx_mcp</code>、<code>flowx_sdk</code> 和 <code>flowx_a2a</code> 把它们暴露给不同的 Agent 宿主。</p>
+              <div class="code-window">
+                <div class="code-header"><span>仓库结构</span><span>一次安装</span></div>
+                <pre>packages/core   flowx_core   builder · service · auditors
+packages/mcp    flowx_mcp    本地 stdio 服务
+packages/sdk    flowx_sdk    Python 客户端
+packages/a2a    flowx_a2a    非流式适配器
+skills/         flowx-workflows
+plugins/        DeepSeek Harness · Hermes</pre>
+              </div>
+            </section>
+
+            <section class="manual-block" id="guardrails">
+              <p class="eyebrow"><span>10</span> / 安全边界</p>
+              <h2>运行前先审阅</h2>
+              <ul>
+                <li>提交的节点测试会在本地 pytest 中运行，冒烟测试或服务运行会执行生成代码。运行服务前请审阅产物和代码。</li>
+                <li>生成的代码和测试没有沙箱隔离；Provider 调用可能产生费用。</li>
+                <li>工作流文件归 FlowX 所有。用 <code>read_workflow_artifact</code> 读取，用 <code>begin_build</code> 或 <code>begin_evolve</code> 修改；<code>verify_workflow</code> 会检查记录的 SHA-256 摘要。</li>
+                <li>凭据放在进程环境或工作流服务自己的 <code>.env</code> 中；不要提交到代码仓库。</li>
+              </ul>
+              <div class="manual-note"><strong>需要完整协议？</strong> 阅读 <a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/DYNAMIC_WORKFLOW.md" target="_blank" rel="noopener noreferrer">DYNAMIC_WORKFLOW.md</a> 了解构建器细节，<a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/RUNTIME.md" target="_blank" rel="noopener noreferrer">RUNTIME.md</a> 了解运行时兼容性，<a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/PROVENANCE.md" target="_blank" rel="noopener noreferrer">PROVENANCE.md</a> 了解来源追溯。</div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="build-cta">
+        <div class="container build-cta-inner">
+          <p class="eyebrow"><span>11</span> / 下一步</p>
+          <h2>现在构建<br /><span class="text-gradient">一个真实流程。</span></h2>
+          <p class="section-lead">从团队目前手工执行的流程开始，然后检查第一次构建留下了什么。</p>
+          <div class="page-actions">
+            <a class="button button-primary" href="showcase.zh-CN.html">查看完整构建 <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="tools.zh-CN.html">浏览工具面 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mega-footer">
+      <div class="container">
+        <div class="mega-footer-grid">
+          <div class="footer-brand-block">
+            <a class="brand footer-brand" href="index.zh-CN.html"><img src="assets/flowx-mark.svg" alt="" width="30" height="30" /><span>Flow<span class="brand-x">X</span></span></a>
+            <p>你的编码 Agent 编写工作流；FlowX 负责审计、测试、版本化并运行它。开源、本地优先、Apache 2.0。</p>
+          </div>
+          <div class="footer-col"><h3>产品</h3><ul><li><a href="why.zh-CN.html">为什么是 FlowX</a></li><li><a href="tools.zh-CN.html">工具面</a></li><li><a href="showcase.zh-CN.html">案例</a></li><li><a href="manual.zh-CN.html">手册</a></li><li><a href="#install">快速开始</a></li></ul></div>
+          <div class="footer-col"><h3>文档</h3><ul><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/README.zh-CN.md" target="_blank" rel="noopener noreferrer">中文 README ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/DYNAMIC_WORKFLOW.md" target="_blank" rel="noopener noreferrer">构建器协议 ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/RUNTIME.md" target="_blank" rel="noopener noreferrer">运行时 ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md" target="_blank" rel="noopener noreferrer">Agent skill ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">许可证 ↗</a></li></ul></div>
+          <div class="footer-col"><h3>社区</h3><ul><li><a href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li><li><a href="https://discord.com/invite/KHnDtNqxp" target="_blank" rel="noopener noreferrer">Discord ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/issues" target="_blank" rel="noopener noreferrer">Issues ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/releases" target="_blank" rel="noopener noreferrer">版本发布 ↗</a></li><li><a href="https://star-history.com/#AIpRoBuilder/FlowX&amp;Date" target="_blank" rel="noopener noreferrer">Star 历史 ↗</a></li></ul></div>
+          <div class="footer-col"><h3>联系</h3><ul><li><a href="mailto:peterxcx@gmail.com">peterxcx@gmail.com</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/PROVENANCE.md" target="_blank" rel="noopener noreferrer">来源追溯 ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX#contributing" target="_blank" rel="noopener noreferrer">参与贡献 ↗</a></li><li><a href="#top">返回顶部 ↑</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 FlowX · APACHE 2.0 · 为 Agent 而构建</span><span>BUILD THE PROCESS / KEEP IT EVOLVING</span></div>
+      </div>
+    </footer>
+  </body>
+</html>

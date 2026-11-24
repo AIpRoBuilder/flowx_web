@@ -13,6 +13,54 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/" />
   </url>
   <url>
+    <loc>https://www.flow-x.work/why.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.flow-x.work/why.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/why.zh-CN.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/why.html" />
+  </url>
+  <url>
+    <loc>https://www.flow-x.work/why.zh-CN.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.flow-x.work/why.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/why.zh-CN.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/why.html" />
+  </url>
+  <url>
+    <loc>https://www.flow-x.work/tools.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.flow-x.work/tools.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/tools.zh-CN.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/tools.html" />
+  </url>
+  <url>
+    <loc>https://www.flow-x.work/tools.zh-CN.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.flow-x.work/tools.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/tools.zh-CN.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/tools.html" />
+  </url>
+  <url>
+    <loc>https://www.flow-x.work/showcase.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.flow-x.work/showcase.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/showcase.zh-CN.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/showcase.html" />
+  </url>
+  <url>
+    <loc>https://www.flow-x.work/showcase.zh-CN.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.flow-x.work/showcase.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/showcase.zh-CN.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/showcase.html" />
+  </url>
+  <url>
+    <loc>https://www.flow-x.work/manual.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.flow-x.work/manual.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/manual.zh-CN.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/manual.html" />
+  </url>
+  <url>
+    <loc>https://www.flow-x.work/manual.zh-CN.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.flow-x.work/manual.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/manual.zh-CN.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/manual.html" />
+  </url>
+  <url>
     <loc>https://www.flow-x.work/assets/picture-workflow-demo.html</loc>
   </url>
 </urlset>

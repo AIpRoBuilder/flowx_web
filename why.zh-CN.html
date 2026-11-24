@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b0f" />
+    <meta name="google-site-verification" content="z1j2lOwTCyCSmdxdT_rCZAdQoIIs76KouPiEtdd7D3k" />
+    <meta name="baidu-site-verification" content="codeva-i7WjuOg6xc" />
+    <meta name="yandex-verification" content="f1fecc89b8e0a217" />
+    <title>为什么是 FlowX | 契约，而非提示词</title>
+    <meta name="description" content="为什么 FlowX 用契约而不是一次性提示词构建 AI Agent 工作流：审计、测试、版本、运行证据和节点级复用" />
+    <link rel="canonical" href="https://www.flow-x.work/why.zh-CN.html" />
+    <link rel="alternate" hreflang="en" href="https://www.flow-x.work/why.html" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/why.zh-CN.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/why.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="FlowX" />
+    <meta property="og:url" content="https://www.flow-x.work/why.zh-CN.html" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="为什么是 FlowX | 契约，而非提示词" />
+    <meta property="og:description" content="一次对话回答不是流程。FlowX 为每个产物提供契约，审计并测试返回结果，只发布通过的内容。" />
+    <meta property="og:image" content="https://www.flow-x.work/assets/social-card.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FlowX：构建可持续演进的执行过程" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="为什么是 FlowX | 契约，而非提示词" />
+    <meta name="twitter:description" content="一次对话回答不是流程。FlowX 为每个产物提供契约，审计并测试返回结果，只发布通过的内容。" />
+    <meta name="twitter:image" content="https://www.flow-x.work/assets/social-card.png" />
+    <meta name="twitter:image:alt" content="FlowX：构建可持续演进的执行过程" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "为什么是 FlowX | 契约，而非提示词",
+        "description": "为什么 FlowX 用契约而不是一次性提示词构建 AI Agent 工作流：审计、测试、版本、运行证据和节点级复用",
+        "url": "https://www.flow-x.work/why.zh-CN.html",
+        "inLanguage": "zh-CN",
+        "isPartOf": { "@type": "WebSite", "name": "FlowX", "url": "https://www.flow-x.work/" }
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="assets/flowx-mark.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳转到主要内容</a>
+
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="index.zh-CN.html" aria-label="FlowX 首页">
+          <img src="assets/flowx-mark.svg" alt="" width="34" height="34" />
+          <span>Flow<span class="brand-x">X</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="why.zh-CN.html" aria-current="page">为什么是 FlowX</a>
+          <a href="tools.zh-CN.html">工具面</a>
+          <a href="showcase.zh-CN.html">案例</a>
+          <a href="manual.zh-CN.html">手册</a>
+        </nav>
+
+        <div class="header-actions">
+          <nav class="language-switch" aria-label="选择语言">
+            <a href="why.zh-CN.html" lang="zh-CN" hreflang="zh-CN" aria-current="page">中</a><span aria-hidden="true">/</span><a href="why.html" lang="en" hreflang="en">EN</a>
+          </nav>
+          <a class="header-github" href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="button button-small button-light" href="manual.zh-CN.html#install">开始构建 <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="mobile-menu">
+          <summary aria-label="打开导航菜单"><span></span><span></span></summary>
+          <nav aria-label="移动端导航">
+            <a href="why.zh-CN.html" aria-current="page">为什么是 FlowX</a>
+            <a href="tools.zh-CN.html">工具面</a>
+            <a href="showcase.zh-CN.html">案例</a>
+            <a href="manual.zh-CN.html">手册</a>
+            <a href="manual.zh-CN.html#install">开始构建</a>
+            <a href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <div class="mobile-languages" aria-label="选择语言"><a href="why.zh-CN.html" lang="zh-CN" hreflang="zh-CN" aria-current="page">简体中文</a><a href="why.html" lang="en" hreflang="en">English ↗</a></div>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero" id="top">
+        <div class="container page-hero-inner">
+          <p class="page-kicker"><a href="index.zh-CN.html">FLOWX</a> <span aria-hidden="true">/</span> 为什么是 FLOWX</p>
+          <h1>契约，而非提示词。<br /><span>流程，而非一次性回答。</span></h1>
+          <p class="section-lead">Agent 可以在一轮对话里给出看似合理的回答。团队需要的是每次都得到同样的结果，并且有图、测试、版本和证据。FlowX 存在的意义，就是让后者成为可能。</p>
+          <div class="page-actions">
+            <a class="button button-primary" href="manual.zh-CN.html#install">安装 FlowX <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="tools.zh-CN.html">浏览工具面 <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="page-meta"><span><strong>22</strong> 个 MCP 工具</span><span><strong>3</strong> 种接入方式</span><span><strong>0</strong> 个模型密钥</span><span><strong>APACHE 2.0</strong></span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-intro split-intro">
+            <div><p class="eyebrow"><span>01</span> / 问题</p><h2>如果模型掌握控制流，<br />流程就只是<span class="text-gradient">猜测</span></h2></div>
+            <p class="section-lead">提示词驱动的系统每次运行都会重新决定下一步。演示时很灵活，生产环境里很脆弱</p>
+          </div>
+          <div class="contrast-grid">
+            <article class="contrast-card is-bad">
+              <span class="card-index">默认的 AGENT 中心设计</span>
+              <h3>回答就是产物</h3>
+              <p>模型决定下一步、收集上下文并返回结果。对话之外没有东西记录它为什么成功。</p>
+              <ul class="contrast-list">
+                <li>每次运行的控制流都是概率性的</li>
+                <li>上下文和工具结果每次都要重新读取、重新推理</li>
+                <li>修一个问题往往要重建整个行为</li>
+                <li>没有图、测试集、版本或运行日志可供检查</li>
+              </ul>
+            </article>
+            <article class="contrast-card is-good">
+              <span class="card-index">FLOWX 的契约中心设计</span>
+              <h3>流程就是产物</h3>
+              <p>编码 Agent 在构建时编写，FlowX 定义产物、检查结果，之后运行确定性代码。</p>
+              <ul class="contrast-list">
+                <li>每个产物一份契约：需求、图、节点代码与测试</li>
+                <li>审计器和 pytest 决定什么可以发布</li>
+                <li>失败节点返回检查结果和有限次数的修复任务</li>
+                <li>输入未变化的节点在演进时直接复用</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid-surface">
+        <div class="container">
+          <div class="section-intro split-intro">
+            <div><p class="eyebrow"><span>02</span> / 你得到什么</p><h2>每次构建背后的<br />六个<span class="text-gradient">保证</span></h2></div>
+            <p class="section-lead">这些是构建器和服务管理器的属性，不是团队需要记住的约定</p>
+          </div>
+          <div class="claim-grid">
+            <article class="claim-card"><span class="card-index">01 / 契约</span><h3>一次一个产物</h3><p>每个任务都带有指令、规则、schema、上下文和提交槽位，宿主 Agent 不需要猜结构。</p></article>
+            <article class="claim-card"><span class="card-index">02 / 审计</span><h3>检查结果，而非感觉</h3><p>拒绝会给出规则、消息、行号和修复建议，下一次尝试可以只修复真正失败的部分。</p></article>
+            <article class="claim-card"><span class="card-index">03 / 测试</span><h3>构建过程中跑 pytest</h3><p>节点测试在本地运行，修复次数有上限，构建不会无限循环。</p></article>
+            <article class="claim-card"><span class="card-index">04 / 版本</span><h3>只发布通过的内容</h3><p>通过的产物成为版本化节点；失败节点不会发布，其下游节点被阻塞。</p></article>
+            <article class="claim-card"><span class="card-index">05 / 证据</span><h3>运行日志和服务日志</h3><p><code>get_evidence</code> 返回最近的运行日志和服务日志尾部，供下一次修复使用。</p></article>
+            <article class="claim-card"><span class="card-index">06 / 复用</span><h3>只演进一个节点</h3><p><code>begin_evolve</code> 可以在冻结拓扑的情况下重写一个节点，也可以修改整张图；未变化的节点全部复用。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split-section">
+          <div>
+            <p class="eyebrow"><span>03</span> / 构建</p>
+            <h2 class="split-heading">所有东西都会留下痕迹</h2>
+          </div>
+          <div class="prose">
+            <p>FlowX 不要求你相信一段对话记录。构建会写出<strong>需求</strong>、<strong>工作流图</strong>、每个节点一份<strong>代码与测试</strong>，以及渲染后的<strong>入口文件</strong>。每个产物都要通过自己的检查；拒绝会精确指向行号，并带着修复建议返回任务。</p>
+            <p>生成的服务是建立在 <code>ag_ui_workflow</code> 运行时上的普通 FastAPI 代码。服务管理器负责启动、逐步输入、清理暂停的会话并返回证据。智能 UI 留在上层，FlowX 留在下层。</p>
+            <div class="code-window">
+              <div class="code-header"><span>产物流</span><span>只读视图</span></div>
+              <pre>intent
+  → requirement.md
+  → workflow.json
+  → nodes/*.py + tests
+  → main.py (rendered)
+
+gates
+  requirement check
+  graph audit
+  node audit + pytest
+  entrypoint audit
+  optional smoke run</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid-surface">
+        <div class="container">
+          <div class="section-intro split-intro">
+            <div><p class="eyebrow"><span>04</span> / 架构</p><h2>两个实体。<br />三种<span class="text-gradient">接入方式</span></h2></div>
+            <p class="section-lead">同一个构建器和服务管理器可以暴露给不同的 Agent 宿主，而工作流本身不变</p>
+          </div>
+          <div class="interface-grid">
+            <article class="interface-card"><div class="interface-top"><span class="interface-label">01 / 构建器</span><span class="interface-icon icon-orange" aria-hidden="true">◇</span></div><h3>WorkflowBuilder</h3><p>发放契约，用审计器和 pytest 验证产物，发布版本，并渲染 FastAPI 服务。</p><span class="interface-tag">构建 + 检查</span></article>
+            <article class="interface-card"><div class="interface-top"><span class="interface-label">02 / 服务</span><span class="interface-icon icon-purple" aria-hidden="true">▷</span></div><h3>ServiceManager</h3><p>运行渲染后的服务，驱动步骤，重置会话，并返回运行日志和服务日志作为证据。</p><span class="interface-tag">运行 + 观察</span></article>
+            <article class="interface-card"><div class="interface-top"><span class="interface-label">03 / 宿主</span><span class="interface-icon icon-blue" aria-hidden="true">⇄</span></div><h3>MCP · SDK · A2A</h3><p>Claude Code、Codex、Hermes、DeepSeek Harness、Python 应用或另一个 Agent 都可以操作同样的两个实体。</p><span class="interface-tag">带上你的 AGENT</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <figure class="pull-quote">
+            <blockquote>“把意图变成可编辑、可复用的流程，而不是一次性回答。以后修改工作流时，不必重建没有变化的节点。”</blockquote>
+            <figcaption>FLOWX README · <a href="https://github.com/AIpRoBuilder/FlowX/blob/main/README.zh-CN.md#why-flowx" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="build-cta">
+        <div class="container build-cta-inner">
+          <p class="eyebrow"><span>05</span> / 下一步</p>
+          <h2>构建流程。<br /><span class="text-gradient">让它持续演进。</span></h2>
+          <p class="section-lead">安装 FlowX，连接你的 Harness，让第一次构建留下可以检查的痕迹。</p>
+          <div class="page-actions">
+            <a class="button button-primary" href="manual.zh-CN.html#install">阅读手册 <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="showcase.zh-CN.html">看看一次构建长什么样 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mega-footer">
+      <div class="container">
+        <div class="mega-footer-grid">
+          <div class="footer-brand-block">
+            <a class="brand footer-brand" href="index.zh-CN.html"><img src="assets/flowx-mark.svg" alt="" width="30" height="30" /><span>Flow<span class="brand-x">X</span></span></a>
+            <p>你的编码 Agent 编写工作流；FlowX 负责审计、测试、版本化并运行它。开源、本地优先、Apache 2.0。</p>
+          </div>
+          <div class="footer-col"><h3>产品</h3><ul><li><a href="why.zh-CN.html">为什么是 FlowX</a></li><li><a href="tools.zh-CN.html">工具面</a></li><li><a href="showcase.zh-CN.html">案例</a></li><li><a href="manual.zh-CN.html">手册</a></li><li><a href="manual.zh-CN.html#install">快速开始</a></li></ul></div>
+          <div class="footer-col"><h3>文档</h3><ul><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/README.zh-CN.md" target="_blank" rel="noopener noreferrer">中文 README ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/DYNAMIC_WORKFLOW.md" target="_blank" rel="noopener noreferrer">构建器协议 ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/RUNTIME.md" target="_blank" rel="noopener noreferrer">运行时 ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md" target="_blank" rel="noopener noreferrer">Agent skill ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">许可证 ↗</a></li></ul></div>
+          <div class="footer-col"><h3>社区</h3><ul><li><a href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li><li><a href="https://discord.com/invite/KHnDtNqxp" target="_blank" rel="noopener noreferrer">Discord ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/issues" target="_blank" rel="noopener noreferrer">Issues ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/releases" target="_blank" rel="noopener noreferrer">版本发布 ↗</a></li><li><a href="https://star-history.com/#AIpRoBuilder/FlowX&amp;Date" target="_blank" rel="noopener noreferrer">Star 历史 ↗</a></li></ul></div>
+          <div class="footer-col"><h3>联系</h3><ul><li><a href="mailto:peterxcx@gmail.com">peterxcx@gmail.com</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/PROVENANCE.md" target="_blank" rel="noopener noreferrer">来源追溯 ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX#contributing" target="_blank" rel="noopener noreferrer">参与贡献 ↗</a></li><li><a href="#top">返回顶部 ↑</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 FlowX · APACHE 2.0 · 为 Agent 而构建</span><span>BUILD THE PROCESS / KEEP IT EVOLVING</span></div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -2,7 +2,7 @@
 
 [English](README.en.md) · [FlowX 项目](https://github.com/AIpRoBuilder/FlowX) · [中文文档](https://github.com/AIpRoBuilder/FlowX/blob/main/README.zh-CN.md)
 
-这是 FlowX 的静态介绍网站。FlowX 是面向 AI Agent 的生成式工作流层，通过 MCP、Python SDK 和 A2A 适配器生成、运行和演进工作流。本仓库只包含网站，不包含 FlowX 引擎或 MCP 服务。
+这是 FlowX 的静态介绍网站。FlowX 是面向 AI Agent 的开源工作流构建器与服务管理器：你的编码 Agent 编写工作流，FlowX 通过 MCP、Python SDK 和 A2A 适配器审计、测试、版本化并运行它。本仓库只包含网站，不包含 FlowX 引擎或 MCP 服务。
 
 ## 本地预览
 
@@ -16,11 +16,11 @@
 docker compose up --build -d
 ```
 
-默认监听本机 8080 端口。网站文件为 `index.html`、`index.zh-CN.html`、`index.en.html`（旧英文地址的兼容跳转）、`styles.css`、`assets/`、`robots.txt` 和 `sitemap.xml`。
+默认监听本机 8080 端口。网站包含中英文首页，以及一一对应的 `why`（设计理念）、`tools`（MCP 工具面）、`showcase`（案例）和 `manual`（手册）页面；另有 `index.en.html`（旧英文地址的兼容跳转）、`styles.css`、`assets/`、`robots.txt` 和 `sitemap.xml`。
 
 ## 搜索与分享
 
-网站的规范地址为 <https://www.flow-x.work/>。中英文首页均包含规范地址、语言替代链接、社交分享元数据和结构化数据。首页的示例区链接到 `assets/picture-workflow-demo.html` 交互演示；站点地图列出规范的中英文首页和该英文示例页；旧英文地址会跳转至首页。
+网站的规范地址为 <https://www.flow-x.work/>。每组中英文页面均包含规范地址、语言替代链接、社交分享元数据和结构化数据。首页的示例区链接到 `assets/picture-workflow-demo.html` 交互演示；站点地图列出五组中英文页面和该英文示例页；旧英文地址会跳转至首页。
 
 搜索引擎只读取域名根目录下的 `robots.txt`。使用自定义域名部署在根目录时，仓库中的文件会声明站点地图地址。请在搜索引擎站长工具中提交 <https://www.flow-x.work/sitemap.xml>。
 

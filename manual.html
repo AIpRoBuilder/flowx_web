@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b0f" />
+    <meta name="google-site-verification" content="z1j2lOwTCyCSmdxdT_rCZAdQoIIs76KouPiEtdd7D3k" />
+    <meta name="baidu-site-verification" content="codeva-i7WjuOg6xc" />
+    <meta name="yandex-verification" content="f1fecc89b8e0a217" />
+    <title>Manual | Install and run FlowX</title>
+    <meta name="description" content="The FlowX manual: install, configure the workspace, register the MCP server, install the agent skill, build a first workflow, use the Python SDK or A2A, and inspect the architecture" />
+    <link rel="canonical" href="https://www.flow-x.work/manual.html" />
+    <link rel="alternate" hreflang="en" href="https://www.flow-x.work/manual.html" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/manual.zh-CN.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/manual.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="FlowX" />
+    <meta property="og:url" content="https://www.flow-x.work/manual.html" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:title" content="Manual | Install and run FlowX" />
+    <meta property="og:description" content="Install FlowX, register the MCP server, install the agent skill, build a first workflow, and inspect what the build leaves behind." />
+    <meta property="og:image" content="https://www.flow-x.work/assets/social-card.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FlowX: build the process and keep it evolving" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Manual | Install and run FlowX" />
+    <meta name="twitter:description" content="Install FlowX, register the MCP server, install the agent skill, build a first workflow, and inspect what the build leaves behind." />
+    <meta name="twitter:image" content="https://www.flow-x.work/assets/social-card.png" />
+    <meta name="twitter:image:alt" content="FlowX: build the process and keep it evolving" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "FlowX manual",
+        "description": "Install FlowX, register the MCP server, install the agent skill, build a first workflow, and inspect what the build leaves behind.",
+        "url": "https://www.flow-x.work/manual.html",
+        "inLanguage": "en",
+        "isPartOf": { "@type": "WebSite", "name": "FlowX", "url": "https://www.flow-x.work/" }
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="assets/flowx-mark.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="index.html" aria-label="FlowX home">
+          <img src="assets/flowx-mark.svg" alt="" width="34" height="34" />
+          <span>Flow<span class="brand-x">X</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="why.html">Why FlowX</a>
+          <a href="tools.html">Tools</a>
+          <a href="showcase.html">Showcase</a>
+          <a href="manual.html" aria-current="page">Manual</a>
+        </nav>
+
+        <div class="header-actions">
+          <nav class="language-switch" aria-label="Choose language">
+            <a href="manual.zh-CN.html" lang="zh-CN" hreflang="zh-CN">中</a><span aria-hidden="true">/</span><a href="manual.html" lang="en" hreflang="en" aria-current="page">EN</a>
+          </nav>
+          <a class="header-github" href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="button button-small button-light" href="#install">Start building <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="mobile-menu">
+          <summary aria-label="Open navigation menu"><span></span><span></span></summary>
+          <nav aria-label="Mobile navigation">
+            <a href="why.html">Why FlowX</a>
+            <a href="tools.html">Tools</a>
+            <a href="showcase.html">Showcase</a>
+            <a href="manual.html" aria-current="page">Manual</a>
+            <a href="#install">Start building</a>
+            <a href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <div class="mobile-languages" aria-label="Choose language"><a href="manual.zh-CN.html" lang="zh-CN" hreflang="zh-CN">简体中文 ↗</a><a href="manual.html" lang="en" hreflang="en" aria-current="page">English</a></div>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero" id="top">
+        <div class="container page-hero-inner">
+          <p class="page-kicker"><a href="index.html">FLOWX</a> <span aria-hidden="true">/</span> MANUAL</p>
+          <h1>From clone to<br /><span>the first finished build</span></h1>
+          <p class="section-lead">Everything needed to run FlowX locally: prerequisites, installation, workspace configuration, MCP registration, the agent skill, a first build, the SDK, A2A, and the guardrails around generated code.</p>
+          <div class="page-actions">
+            <a class="button button-primary" href="#install">Install <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://github.com/AIpRoBuilder/FlowX#setup" target="_blank" rel="noopener noreferrer">Canonical README <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="page-meta"><span><strong>PYTHON 3.10+</strong></span><span><strong>APACHE 2.0</strong></span><span><strong>NO MODEL KEY</strong></span><span><strong>LOCAL-FIRST</strong></span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container manual-layout">
+          <nav class="manual-nav" aria-label="Manual sections" data-manual-nav>
+            <a href="#requirements">Requirements</a>
+            <a href="#install">Install</a>
+            <a href="#configure">Configure</a>
+            <a href="#mcp">Register MCP</a>
+            <a href="#agent-skill">Agent skill</a>
+            <a href="#first-build">First build</a>
+            <a href="#sdk">Python SDK</a>
+            <a href="#a2a">A2A</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#guardrails">Guardrails</a>
+          </nav>
+
+          <div class="manual-content">
+            <section class="manual-block" id="requirements">
+              <p class="eyebrow"><span>01</span> / REQUIREMENTS</p>
+              <h2>What you need</h2>
+              <ul>
+                <li>Python 3.10 or later.</li>
+                <li>Git, to obtain FlowX and its workflow runtime dependency.</li>
+                <li>An MCP-capable coding agent, or your own Python or A2A agent, to write the artifacts FlowX asks for.</li>
+              </ul>
+              <p>FlowX does not call a model. It hands your agent a contract for each artifact, audits and tests what comes back, publishes versioned nodes, renders the FastAPI service, and runs it.</p>
+              <div class="manual-note"><strong>No keys required:</strong> provider and media variables are only needed by the workflows you generate when those workflows call a model or media service. Put them in the process environment or in the workflow service's own <code>.env</code>.</div>
+            </section>
+
+            <section class="manual-block" id="install">
+              <p class="eyebrow"><span>02</span> / INSTALL</p>
+              <h2>Clone and install</h2>
+              <p>One installation includes the shared core, the MCP server, the Python SDK, and the A2A adapter.</p>
+              <div class="code-window">
+                <div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="manual-install" data-copied="Copied" data-failed="Copy manually" aria-label="Copy installation commands"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div>
+                <pre><code id="manual-install">git clone https://github.com/AIpRoBuilder/FlowX.git
+cd FlowX
+python3.10 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e .</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <p>Poetry, uv, and conda are also documented. With Poetry: <code>poetry env use python3.10</code> and <code>poetry install</code>. With uv: <code>uv sync</code>. With conda: <code>conda env create -f environment.yml</code>.</p>
+            </section>
+
+            <section class="manual-block" id="configure">
+              <p class="eyebrow"><span>03</span> / CONFIGURE</p>
+              <h2>Point FlowX at a workspace</h2>
+              <p>Copy the example environment file and set the workspace where workflows and artifacts will live.</p>
+              <div class="code-window">
+                <div class="code-header"><span>.env</span><button type="button" class="copy-button" data-copy-target="manual-env" data-copied="Copied" data-failed="Copy manually" aria-label="Copy environment example"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div>
+                <pre><code id="manual-env">cp .env.example .env
+
+# .env
+FLOWX_DEFAULT_WORKSPACE=./.flowx_workspaces</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <p><code>FLOWX_CONFIG_ROOT</code> lets an installed <code>flowx-mcp</code> resolve a <code>.env</code> file outside the repository checkout. <code>FLOWX_EXTRA_PATHS</code> can point at a local <code>ag_ui_workflow</code> source when it is not installed into the current environment.</p>
+              <p>The SDK and A2A server read process environment variables; they do not automatically load this <code>.env</code> file. Export the settings or load the file in your application before creating a client: <code>set -a; source .env; set +a</code>.</p>
+            </section>
+
+            <section class="manual-block" id="mcp">
+              <p class="eyebrow"><span>04</span> / MCP</p>
+              <h2>Register the local server</h2>
+              <p>Check the entry point, then register the absolute path to your virtual environment's <code>flowx-mcp</code> in your MCP client.</p>
+              <div class="code-window">
+                <div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="manual-mcp-run" data-copied="Copied" data-failed="Copy manually" aria-label="Copy MCP server commands"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div>
+                <pre><code id="manual-mcp-run">flowx-mcp            # local stdio entry point
+flowx-mcp --verbose  # verbose logging
+python3.10 run_server.py  # source-checkout entry point</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <div class="code-window">
+                <div class="code-header"><span>mcp.json</span><button type="button" class="copy-button" data-copy-target="manual-mcp" data-copied="Copied" data-failed="Copy manually" aria-label="Copy MCP configuration"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div>
+                <pre><code id="manual-mcp">{
+  "mcpServers": {
+    "flowx": {
+      "command": "/absolute/path/to/your/venv/bin/flowx-mcp",
+      "env": {
+        "FLOWX_DEFAULT_WORKSPACE": "/absolute/path/to/flowx_workspaces"
+      }
+    }
+  }
+}</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <p>MCP hosts may not inherit your shell's <code>PATH</code>. Use absolute paths and store workflow credentials according to your client's security guidance.</p>
+            </section>
+
+            <section class="manual-block" id="agent-skill">
+              <p class="eyebrow"><span>05</span> / AGENT SKILL</p>
+              <h2>Teach the host to use the loop</h2>
+              <p>The <a href="https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md" target="_blank" rel="noopener noreferrer">FlowX skill</a> guides a compatible coding agent through building, inspecting, repairing, running, and evolving workflows. Installing the skill copies its instructions and scripts, not the SDK; registering MCP is a separate step.</p>
+              <div class="manual-split">
+                <div class="manual-mini"><h3>Claude Code</h3><p><code>npx skills add AIpRoBuilder/FlowX --skill flowx-workflows -a claude-code -g</code></p></div>
+                <div class="manual-mini"><h3>Codex</h3><p><code>npx skills add AIpRoBuilder/FlowX --skill flowx-workflows -a codex -g</code></p></div>
+                <div class="manual-mini"><h3>Hermes Agent</h3><p><code>hermes skills install AIpRoBuilder/FlowX/skills/flowx-workflows</code></p></div>
+                <div class="manual-mini"><h3>VS Code / Copilot</h3><p><code>mkdir -p ~/.copilot/skills/flowx-workflows</code> then copy <code>skills/flowx-workflows/.</code> into it.</p></div>
+              </div>
+              <p>DeepSeek Harness also has a read-only viewer plugin, installed separately with <code>dsh plugin --profile web add ./plugins/deepseek-harness-flowx</code> from a FlowX checkout. Use the skill to build, evolve, and run workflows.</p>
+            </section>
+
+            <section class="manual-block" id="first-build">
+              <p class="eyebrow"><span>06</span> / FIRST BUILD</p>
+              <h2>Describe, submit, inspect</h2>
+              <p>After setup, ask your MCP-capable agent to build something specific. FlowX allocates the workflow, returns contract packets, and gates every artifact.</p>
+              <div class="code-window">
+                <div class="code-header"><span>PROMPT</span><button type="button" class="copy-button" data-copy-target="manual-prompt" data-copied="Copied" data-failed="Copy manually" aria-label="Copy first workflow prompt"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div>
+                <pre><code id="manual-prompt">Use flowx to build a workflow.
+
+Build a workflow that accepts a support ticket, classifies its
+category, assigns a priority, and drafts a reply. Name the reply
+node draft_reply. Return the category, priority, and draft reply
+as structured output.</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <h3>What happens next</h3>
+              <ul>
+                <li><code>create_workflow</code> allocates the folder and <code>workflow_id</code>.</li>
+                <li><code>begin_build</code> opens a revision and returns <code>next_tasks</code> with the contract for each artifact.</li>
+                <li>The agent submits the requirement, the graph, then one code and test pair per node.</li>
+                <li>Rejections include findings with rule, line, remediation, and a repair task; <code>max_attempts</code> is bounded.</li>
+                <li><code>get_build_state</code> and <code>get_build_events</code> show stages, node status, the next action, and the journal.</li>
+              </ul>
+              <p>Build state lives in the MCP server process and in <code>build/events.jsonl</code>. After a restart, call <code>begin_build</code> again: published nodes are reused, so only unfinished work is requested.</p>
+            </section>
+
+            <section class="manual-block" id="sdk">
+              <p class="eyebrow"><span>07</span> / PYTHON SDK</p>
+              <h2>Embed the builder</h2>
+              <p>Use the SDK when your own Python agent or application backend should answer the contracts without an MCP transport.</p>
+              <div class="code-window">
+                <div class="code-header"><span>python</span><button type="button" class="copy-button" data-copy-target="manual-sdk" data-copied="Copied" data-failed="Copy manually" aria-label="Copy Python SDK example"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div>
+                <pre><code id="manual-sdk">from flowx_sdk import FlowXClient
+
+def solve(task: dict) -&gt; dict:
+    # contract, context, meta, and submit.slots say what to write.
+    return my_agent.write(task)
+
+with FlowXClient(workspace="./workflows") as flowx:
+    workflow_id = flowx.create_workflow("ticket-triage")
+    state = flowx.build(workflow_id, "Categorize support tickets.", solve)
+    assert state["status"] == "completed", state["errors"]
+    print(flowx.run_service(workflow_id))
+    input("Press Enter to stop the service... ")</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <p>Keep the client open while using the service; exiting the <code>with</code> block stops services it started and aborts open builds, while published versions stay. For finer control, call <code>begin_build</code>, <code>get_tasks</code>, <code>submit_task</code>, <code>get_build_state</code>, <code>get_build_events</code>, <code>reopen_stage</code>, and <code>abort_build</code> directly.</p>
+            </section>
+
+            <section class="manual-block" id="a2a">
+              <p class="eyebrow"><span>08</span> / A2A</p>
+              <h2>Let another agent delegate</h2>
+              <p>Start the non-streaming A2A adapter and point a peer agent at it. A build is an A2A task; while contract tasks are open, the task is <code>input-required</code>.</p>
+              <div class="code-window">
+                <div class="code-header"><span>bash</span><button type="button" class="copy-button" data-copy-target="manual-a2a" data-copied="Copied" data-failed="Copy manually" aria-label="Copy A2A command"><span aria-hidden="true">▢</span> <span class="copy-label">Copy</span></button></div>
+                <pre><code id="manual-a2a">flowx-a2a --host 127.0.0.1 --port 8001</code></pre><span class="copy-result" role="status" aria-live="polite"></span>
+              </div>
+              <p>The agent card is served at <code>/.well-known/agent-card.json</code> and JSON-RPC at <code>/a2a</code>. Supported methods are <code>message/send</code>, <code>tasks/get</code>, and <code>tasks/cancel</code>.</p>
+            </section>
+
+            <section class="manual-block" id="architecture">
+              <p class="eyebrow"><span>09</span> / ARCHITECTURE</p>
+              <h2>Two entities, three interfaces</h2>
+              <p><code>flowx_core.builder</code> (<strong>WorkflowBuilder</strong>) sends contracts, verifies what comes back with auditors and pytest, publishes versions, and renders the service. <code>flowx_core.service</code> (<strong>ServiceManager</strong>) runs and drives the result. <code>flowx_mcp</code>, <code>flowx_sdk</code>, and <code>flowx_a2a</code> expose both to different agent hosts.</p>
+              <div class="code-window">
+                <div class="code-header"><span>REPOSITORY</span><span>ONE INSTALL</span></div>
+                <pre>packages/core   flowx_core   builder · service · auditors
+packages/mcp    flowx_mcp    local stdio server
+packages/sdk    flowx_sdk    Python client
+packages/a2a    flowx_a2a    non-streaming adapter
+skills/         flowx-workflows
+plugins/        DeepSeek Harness · Hermes</pre>
+              </div>
+            </section>
+
+            <section class="manual-block" id="guardrails">
+              <p class="eyebrow"><span>10</span> / GUARDRAILS</p>
+              <h2>Review before you run</h2>
+              <ul>
+                <li>Submitted node tests run locally under pytest, and a smoke test or service run executes generated code. Review the artifacts and code before running the service.</li>
+                <li>Generated code and tests are not sandboxed. Provider calls can be billable.</li>
+                <li>Workflow files are FlowX-owned. Inspect them with <code>read_workflow_artifact</code>; change them with <code>begin_build</code> or <code>begin_evolve</code>. <code>verify_workflow</code> checks recorded SHA-256 digests.</li>
+                <li>Keep credentials in the process environment or the workflow service's own <code>.env</code>; never commit them to a repository.</li>
+              </ul>
+              <div class="manual-note"><strong>Need the full protocol?</strong> Read <a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/DYNAMIC_WORKFLOW.md" target="_blank" rel="noopener noreferrer">DYNAMIC_WORKFLOW.md</a> for builder details, <a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/RUNTIME.md" target="_blank" rel="noopener noreferrer">RUNTIME.md</a> for runtime compatibility, and <a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/PROVENANCE.md" target="_blank" rel="noopener noreferrer">PROVENANCE.md</a> for source provenance.</div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="build-cta">
+        <div class="container build-cta-inner">
+          <p class="eyebrow"><span>11</span> / NEXT</p>
+          <h2>Now build<br /><span class="text-gradient">something real.</span></h2>
+          <p class="section-lead">Start with a workflow your team already runs by hand, then inspect what the first build leaves behind.</p>
+          <div class="page-actions">
+            <a class="button button-primary" href="showcase.html">See a finished build <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="tools.html">Browse the tool surface <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mega-footer">
+      <div class="container">
+        <div class="mega-footer-grid">
+          <div class="footer-brand-block">
+            <a class="brand footer-brand" href="index.html"><img src="assets/flowx-mark.svg" alt="" width="30" height="30" /><span>Flow<span class="brand-x">X</span></span></a>
+            <p>Your coding agent writes the workflow; FlowX audits, tests, versions, and runs it. Open source, local-first, Apache 2.0.</p>
+          </div>
+          <div class="footer-col"><h3>PRODUCT</h3><ul><li><a href="why.html">Why FlowX</a></li><li><a href="tools.html">Tools</a></li><li><a href="showcase.html">Showcase</a></li><li><a href="manual.html">Manual</a></li><li><a href="#install">Quickstart</a></li></ul></div>
+          <div class="footer-col"><h3>DOCS</h3><ul><li><a href="https://github.com/AIpRoBuilder/FlowX#readme" target="_blank" rel="noopener noreferrer">README ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/DYNAMIC_WORKFLOW.md" target="_blank" rel="noopener noreferrer">Builder protocol ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/RUNTIME.md" target="_blank" rel="noopener noreferrer">Runtime ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md" target="_blank" rel="noopener noreferrer">Agent skill ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License ↗</a></li></ul></div>
+          <div class="footer-col"><h3>COMMUNITY</h3><ul><li><a href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li><li><a href="https://discord.com/invite/KHnDtNqxp" target="_blank" rel="noopener noreferrer">Discord ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/issues" target="_blank" rel="noopener noreferrer">Issues ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/releases" target="_blank" rel="noopener noreferrer">Releases ↗</a></li><li><a href="https://star-history.com/#AIpRoBuilder/FlowX&amp;Date" target="_blank" rel="noopener noreferrer">Star history ↗</a></li></ul></div>
+          <div class="footer-col"><h3>CONTACT</h3><ul><li><a href="mailto:peterxcx@gmail.com">peterxcx@gmail.com</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/PROVENANCE.md" target="_blank" rel="noopener noreferrer">Source provenance ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX#contributing" target="_blank" rel="noopener noreferrer">Contributing ↗</a></li><li><a href="#top">Back to top ↑</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 FlowX · APACHE 2.0 · BUILT FOR AGENTS</span><span>BUILD THE PROCESS / KEEP IT EVOLVING</span></div>
+      </div>
+    </footer>
+  </body>
+</html>

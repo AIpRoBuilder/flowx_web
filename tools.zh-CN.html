@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b0f" />
+    <meta name="google-site-verification" content="z1j2lOwTCyCSmdxdT_rCZAdQoIIs76KouPiEtdd7D3k" />
+    <meta name="baidu-site-verification" content="codeva-i7WjuOg6xc" />
+    <meta name="yandex-verification" content="f1fecc89b8e0a217" />
+    <title>工具面 | FlowX MCP 工具</title>
+    <meta name="description" content="浏览 22 个 FlowX MCP 工具：构建、检查、演进和运行 AI Agent 工作流，并了解 MCP、Python SDK 和 A2A 三种接入方式" />
+    <link rel="canonical" href="https://www.flow-x.work/tools.zh-CN.html" />
+    <link rel="alternate" hreflang="en" href="https://www.flow-x.work/tools.html" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/tools.zh-CN.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.flow-x.work/tools.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FlowX" />
+    <meta property="og:url" content="https://www.flow-x.work/tools.zh-CN.html" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="工具面 | FlowX MCP 工具" />
+    <meta property="og:description" content="22 个 MCP 工具覆盖契约、检查、版本、运行和证据；MCP、Python SDK 与 A2A 共享同一个核心。" />
+    <meta property="og:image" content="https://www.flow-x.work/assets/social-card.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FlowX：构建可持续演进的执行过程" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="工具面 | FlowX MCP 工具" />
+    <meta name="twitter:description" content="22 个 MCP 工具覆盖契约、检查、版本、运行和证据；MCP、Python SDK 与 A2A 共享同一个核心。" />
+    <meta name="twitter:image" content="https://www.flow-x.work/assets/social-card.png" />
+    <meta name="twitter:image:alt" content="FlowX：构建可持续演进的执行过程" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "工具面 | FlowX MCP 工具",
+        "description": "浏览 22 个 FlowX MCP 工具：构建、检查、演进和运行 AI Agent 工作流，并了解 MCP、Python SDK 和 A2A 三种接入方式",
+        "url": "https://www.flow-x.work/tools.zh-CN.html",
+        "inLanguage": "zh-CN",
+        "isPartOf": { "@type": "WebSite", "name": "FlowX", "url": "https://www.flow-x.work/" }
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="assets/flowx-mark.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳转到主要内容</a>
+
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="index.zh-CN.html" aria-label="FlowX 首页">
+          <img src="assets/flowx-mark.svg" alt="" width="34" height="34" />
+          <span>Flow<span class="brand-x">X</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="why.zh-CN.html">为什么是 FlowX</a>
+          <a href="tools.zh-CN.html" aria-current="page">工具面</a>
+          <a href="showcase.zh-CN.html">案例</a>
+          <a href="manual.zh-CN.html">手册</a>
+        </nav>
+
+        <div class="header-actions">
+          <nav class="language-switch" aria-label="选择语言">
+            <a href="tools.zh-CN.html" lang="zh-CN" hreflang="zh-CN" aria-current="page">中</a><span aria-hidden="true">/</span><a href="tools.html" lang="en" hreflang="en">EN</a>
+          </nav>
+          <a class="header-github" href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="button button-small button-light" href="manual.zh-CN.html#install">开始构建 <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <details class="mobile-menu">
+          <summary aria-label="打开导航菜单"><span></span><span></span></summary>
+          <nav aria-label="移动端导航">
+            <a href="why.zh-CN.html">为什么是 FlowX</a>
+            <a href="tools.zh-CN.html" aria-current="page">工具面</a>
+            <a href="showcase.zh-CN.html">案例</a>
+            <a href="manual.zh-CN.html">手册</a>
+            <a href="manual.zh-CN.html#install">开始构建</a>
+            <a href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <div class="mobile-languages" aria-label="选择语言"><a href="tools.zh-CN.html" lang="zh-CN" hreflang="zh-CN" aria-current="page">简体中文</a><a href="tools.html" lang="en" hreflang="en">English ↗</a></div>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero" id="top">
+        <div class="container page-hero-inner">
+          <p class="page-kicker"><a href="index.zh-CN.html">FLOWX</a> <span aria-hidden="true">/</span> 工具面</p>
+          <h1>22 个工具。<br /><span>三种接入方式。一个工作流。</span></h1>
+          <p class="section-lead">MCP 工具面覆盖完整循环：分配工作流、接收契约、提交产物、观察检查、运行服务，并演进通过的内容。SDK 和 A2A 适配器暴露同一套协议。</p>
+          <div class="page-actions">
+            <a class="button button-primary" href="manual.zh-CN.html#mcp">注册 MCP 服务 <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://github.com/AIpRoBuilder/FlowX#tool-surface" target="_blank" rel="noopener noreferrer">官方工具表 <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="page-meta"><span><strong>22</strong> 个 MCP 工具</span><span><strong>9</strong> 构建器</span><span><strong>8</strong> 服务</span><span><strong>5</strong> 检查</span></div>
+        </div>
+      </section>
+
+      <section class="section grid-surface">
+        <div class="container">
+          <div class="section-intro split-intro">
+            <div><p class="eyebrow"><span>01</span> / 工具面</p><h2>搜索 Agent<br />可以调用的<span class="text-gradient">工具</span></h2></div>
+            <p class="section-lead">按实体筛选，或按名称和用途搜索。所有工具都通过本地 stdio MCP 提供；SDK 暴露同一套协议。</p>
+          </div>
+          <div class="registry-toolbar">
+            <label class="registry-search"><span>搜索</span><input type="search" placeholder="工具名称或用途" data-tool-search aria-label="搜索 MCP 工具" /></label>
+            <div class="filter-chips" role="group" aria-label="按实体筛选工具">
+              <button class="filter-chip" type="button" data-tool-filter="all" aria-pressed="true">全部 · 22</button>
+              <button class="filter-chip" type="button" data-tool-filter="builder" aria-pressed="false">构建器 · 9</button>
+              <button class="filter-chip" type="button" data-tool-filter="service" aria-pressed="false">服务 · 8</button>
+              <button class="filter-chip" type="button" data-tool-filter="inspection" aria-pressed="false">检查 · 5</button>
+            </div>
+          </div>
+          <div class="registry-meta"><span><strong data-tool-count>22</strong> / 22 个工具</span><span>MCP · 本地 STDIO</span></div>
+          <div class="registry" data-registry>
+            <div class="registry-row" data-tool-row data-group="builder"><span class="registry-group">构建器</span><div class="registry-main"><code>create_workflow(name=None, brief="")</code><p>分配一个空工作流；<code>name</code> 会成为目录和 <code>workflow_id</code>。</p></div><span class="registry-tag">写入</span></div>
+            <div class="registry-row" data-tool-row data-group="builder"><span class="registry-group">构建器</span><div class="registry-main"><code>begin_build(workflow_id, intent="", target=None, ...)</code><p>打开构建修订，返回状态和第一批契约任务 <code>next_tasks</code>。</p></div><span class="registry-tag">写入</span></div>
+            <div class="registry-row" data-tool-row data-group="builder"><span class="registry-group">构建器</span><div class="registry-main"><code>begin_evolve(workflow_id, intent="", scope="node", ...)</code><p>在已构建的工作流上打开编辑修订；节点模式冻结图拓扑。不要直接编辑工作流文件。</p></div><span class="registry-tag">写入</span></div>
+            <div class="registry-row" data-tool-row data-group="builder"><span class="registry-group">构建器</span><div class="registry-main"><code>get_build_state(workflow_id)</code><p>阶段、每个节点的状态、未完成任务摘要、<code>next_action</code> 和未解决的错误。</p></div><span class="registry-tag">读取</span></div>
+            <div class="registry-row" data-tool-row data-group="builder"><span class="registry-group">构建器</span><div class="registry-main"><code>get_tasks(workflow_id, compact=False)</code><p>完整读取未完成的契约任务；<code>compact</code> 会省略重复的契约文本。</p></div><span class="registry-tag">读取</span></div>
+            <div class="registry-row" data-tool-row data-group="builder"><span class="registry-group">构建器</span><div class="registry-main"><code>submit_task(workflow_id, task_id, artifacts)</code><p>提交一个任务的内联产物；通过则发布，拒绝则返回检查结果和修复任务。</p></div><span class="registry-tag">写入</span></div>
+            <div class="registry-row" data-tool-row data-group="builder"><span class="registry-group">构建器</span><div class="registry-main"><code>get_build_events(workflow_id, since=0, limit=200)</code><p>读取序号 <code>since</code> 之后的构建日志，按时间正序。</p></div><span class="registry-tag">读取</span></div>
+            <div class="registry-row" data-tool-row data-group="builder"><span class="registry-group">构建器</span><div class="registry-main"><code>reopen_stage(workflow_id, stage, step_id=None, reason="")</code><p>开启新修订，重做需求、图、某个节点或入口文件。</p></div><span class="registry-tag">写入</span></div>
+            <div class="registry-row" data-tool-row data-group="builder"><span class="registry-group">构建器</span><div class="registry-main"><code>abort_build(workflow_id, reason="")</code><p>取消当前修订；已发布的节点版本会保留。</p></div><span class="registry-tag">写入</span></div>
+            <div class="registry-row" data-tool-row data-group="service"><span class="registry-group">服务</span><div class="registry-main"><code>run_service(workflow_id)</code><p>把构建好的工作流作为服务启动；已在运行的会被替换，工具会等到服务响应。</p></div><span class="registry-tag">运行</span></div>
+            <div class="registry-row" data-tool-row data-group="service"><span class="registry-group">服务</span><div class="registry-main"><code>stop_service(workflow_id)</code><p>停止工作流正在运行的服务。</p></div><span class="registry-tag">运行</span></div>
+            <div class="registry-row" data-tool-row data-group="service"><span class="registry-group">服务</span><div class="registry-main"><code>service_status(workflow_id)</code><p>服务是否在运行、pid、<code>base_url</code> 和日志路径。</p></div><span class="registry-tag">读取</span></div>
+            <div class="registry-row" data-tool-row data-group="service"><span class="registry-group">服务</span><div class="registry-main"><code>run_step(workflow_id, step_id, input=None, ...)</code><p>输入一个步骤的数据；返回 <code>input_required</code> 及等待的步骤，或完成状态和卡片。</p></div><span class="registry-tag">运行</span></div>
+            <div class="registry-row" data-tool-row data-group="service"><span class="registry-group">服务</span><div class="registry-main"><code>reset_session(workflow_id, session_id="")</code><p>取消会话中暂停的运行；下一次 <code>run_step</code> 会开启新的会话。</p></div><span class="registry-tag">运行</span></div>
+            <div class="registry-row" data-tool-row data-group="service"><span class="registry-group">服务</span><div class="registry-main"><code>list_runs(workflow_id, limit=20)</code><p>按时间倒序列出服务最近的运行记录。</p></div><span class="registry-tag">读取</span></div>
+            <div class="registry-row" data-tool-row data-group="service"><span class="registry-group">服务</span><div class="registry-main"><code>get_run(workflow_id, run_id="latest")</code><p>一次运行的日志：每个节点状态、卡片，以及正在等待的问题。</p></div><span class="registry-tag">读取</span></div>
+            <div class="registry-row" data-tool-row data-group="service"><span class="registry-group">服务</span><div class="registry-main"><code>get_evidence(workflow_id, run_id="latest")</code><p>运行日志加服务日志尾部，可直接作为 <code>runtime_evidence</code> 传给 <code>begin_build</code>。</p></div><span class="registry-tag">读取</span></div>
+            <div class="registry-row" data-tool-row data-group="inspection"><span class="registry-group">检查</span><div class="registry-main"><code>list_workflows()</code><p>列出所有工作流及其节点 ID、版本和未解决的错误。</p></div><span class="registry-tag">读取</span></div>
+            <div class="registry-row" data-tool-row data-group="inspection"><span class="registry-group">检查</span><div class="registry-main"><code>list_nodes(workflow_id)</code><p>以 <code>step_id</code>、<code>node_id</code> 和版本列出节点；构建前 <code>node_id</code> 为空。</p></div><span class="registry-tag">读取</span></div>
+            <div class="registry-row" data-tool-row data-group="inspection"><span class="registry-group">检查</span><div class="registry-main"><code>get_workflow(workflow_id)</code><p>只读位置：需求、<code>workflow.json</code>、节点版本和主入口文件。</p></div><span class="registry-tag">读取</span></div>
+            <div class="registry-row" data-tool-row data-group="inspection"><span class="registry-group">检查</span><div class="registry-main"><code>read_workflow_artifact(workflow_id, slot, ...)</code><p>把 FlowX 拥有的产物作为经验证的只读文本读取；只能通过 <code>begin_build</code> 或 <code>begin_evolve</code> 修改。</p></div><span class="registry-tag">读取</span></div>
+            <div class="registry-row" data-tool-row data-group="inspection"><span class="registry-group">检查</span><div class="registry-main"><code>verify_workflow(workflow_id, include_service=True)</code><p>检查 FlowX 拥有的文件是否仍匹配记录的 SHA-256 摘要；不要手工修复不匹配。</p></div><span class="registry-tag">读取</span></div>
+          </div>
+          <p class="registry-empty" data-registry-empty hidden>没有匹配该搜索的工具。</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-intro split-intro">
+            <div><p class="eyebrow"><span>02</span> / 接入方式</p><h2>同一套协议。<br />三个<span class="text-gradient">入口</span></h2></div>
+            <p class="section-lead">选择适合宿主的传输方式；构建器、检查、版本和服务管理器保持不变</p>
+          </div>
+          <div class="quickstart-grid">
+            <article class="code-card">
+              <div class="code-card-intro"><span class="card-index">01 / MCP</span><h3>Agent 客户端</h3><p>注册本地 stdio 服务；MCP 主机可能不会继承 Shell 的 PATH，请使用绝对路径。</p></div>
+              <div class="code-window"><div class="code-header"><span>mcp.json</span><button type="button" class="copy-button" data-copy-target="tools-mcp" data-copied="已复制" data-failed="请手动复制" aria-label="复制 MCP 配置"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div><pre><code id="tools-mcp">{
+  "mcpServers": {
+    "flowx": {
+      "command": "/absolute/path/to/venv/bin/flowx-mcp",
+      "env": {
+        "FLOWX_DEFAULT_WORKSPACE": "/absolute/path/to/flowx_workspaces"
+      }
+    }
+  }
+}</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
+              <p class="code-caption">需要检查入口时，可以手动运行 <code>flowx-mcp</code> 或 <code>flowx-mcp --verbose</code>。</p>
+            </article>
+            <article class="code-card">
+              <div class="code-card-intro"><span class="card-index">02 / PYTHON SDK</span><h3>你的应用</h3><p><code>FlowXClient</code> 暴露同一套协议，<code>build()</code> 用你提供的函数回答每个任务。</p></div>
+              <div class="code-window"><div class="code-header"><span>sdk.py</span><button type="button" class="copy-button" data-copy-target="tools-sdk" data-copied="已复制" data-failed="请手动复制" aria-label="复制 Python SDK 示例"><span aria-hidden="true">▢</span> <span class="copy-label">复制</span></button></div><pre><code id="tools-sdk">from flowx_sdk import FlowXClient
+
+def solve(task: dict) -&gt; dict:
+    return my_agent.write(task)
+
+with FlowXClient(workspace="./workflows") as flowx:
+    workflow_id = flowx.create_workflow("ticket-triage")
+    state = flowx.build(workflow_id, "Categorize support tickets.", solve)
+    assert state["status"] == "completed", state["errors"]
+    print(flowx.run_service(workflow_id))</code></pre><span class="copy-result" role="status" aria-live="polite"></span></div>
+              <p class="code-caption">使用服务时保持客户端开启；退出 <code>with</code> 块会停止它启动的服务。</p>
+            </article>
+          </div>
+          <div class="interface-note"><span class="note-mark">✦</span><p><strong>A2A，无需重写传输层</strong> — 另一个 Agent 可以通过非流式适配器委托构建：<code>flowx-a2a --host 127.0.0.1 --port 8001</code>。契约任务未完成时，任务状态为 <code>input-required</code>。</p><a href="https://github.com/AIpRoBuilder/FlowX#a2a-server" target="_blank" rel="noopener noreferrer">阅读 A2A 协议 ↗</a></div>
+        </div>
+      </section>
+
+      <section class="build-cta">
+        <div class="container build-cta-inner">
+          <p class="eyebrow"><span>03</span> / 下一步</p>
+          <h2>让 Agent<br /><span class="text-gradient">调用整个循环</span></h2>
+          <p class="section-lead">安装 FlowX，注册服务，然后让 Agent 构建第一个工作流；其余交给工具面。</p>
+          <div class="page-actions">
+            <a class="button button-primary" href="manual.zh-CN.html#install">安装 FlowX <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="showcase.zh-CN.html">查看一次构建 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mega-footer">
+      <div class="container">
+        <div class="mega-footer-grid">
+          <div class="footer-brand-block">
+            <a class="brand footer-brand" href="index.zh-CN.html"><img src="assets/flowx-mark.svg" alt="" width="30" height="30" /><span>Flow<span class="brand-x">X</span></span></a>
+            <p>你的编码 Agent 编写工作流；FlowX 负责审计、测试、版本化并运行它。开源、本地优先、Apache 2.0。</p>
+          </div>
+          <div class="footer-col"><h3>产品</h3><ul><li><a href="why.zh-CN.html">为什么是 FlowX</a></li><li><a href="tools.zh-CN.html">工具面</a></li><li><a href="showcase.zh-CN.html">案例</a></li><li><a href="manual.zh-CN.html">手册</a></li><li><a href="manual.zh-CN.html#install">快速开始</a></li></ul></div>
+          <div class="footer-col"><h3>文档</h3><ul><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/README.zh-CN.md" target="_blank" rel="noopener noreferrer">中文 README ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/DYNAMIC_WORKFLOW.md" target="_blank" rel="noopener noreferrer">构建器协议 ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/RUNTIME.md" target="_blank" rel="noopener noreferrer">运行时 ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/skills/flowx-workflows/SKILL.md" target="_blank" rel="noopener noreferrer">Agent skill ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">许可证 ↗</a></li></ul></div>
+          <div class="footer-col"><h3>社区</h3><ul><li><a href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li><li><a href="https://discord.com/invite/KHnDtNqxp" target="_blank" rel="noopener noreferrer">Discord ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/issues" target="_blank" rel="noopener noreferrer">Issues ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/releases" target="_blank" rel="noopener noreferrer">版本发布 ↗</a></li><li><a href="https://star-history.com/#AIpRoBuilder/FlowX&amp;Date" target="_blank" rel="noopener noreferrer">Star 历史 ↗</a></li></ul></div>
+          <div class="footer-col"><h3>联系</h3><ul><li><a href="mailto:peterxcx@gmail.com">peterxcx@gmail.com</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX/blob/main/docs/PROVENANCE.md" target="_blank" rel="noopener noreferrer">来源追溯 ↗</a></li><li><a href="https://github.com/AIpRoBuilder/FlowX#contributing" target="_blank" rel="noopener noreferrer">参与贡献 ↗</a></li><li><a href="#top">返回顶部 ↑</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 FlowX · APACHE 2.0 · 为 Agent 而构建</span><span>BUILD THE PROCESS / KEEP IT EVOLVING</span></div>
+      </div>
+    </footer>
+  </body>
+</html>

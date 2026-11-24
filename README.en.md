@@ -2,7 +2,7 @@
 
 [简体中文](README.md) · [FlowX project](https://github.com/AIpRoBuilder/FlowX) · [Documentation](https://github.com/AIpRoBuilder/FlowX#readme)
 
-This is the static introduction website for FlowX. FlowX is a generative workflow layer for AI agents, with MCP, Python SDK, and A2A interfaces for building, running, and evolving workflows. This repository contains the website only, not the FlowX engine or MCP server.
+This is the static introduction website for FlowX. FlowX is an open-source workflow builder and service manager for AI agents: your coding agent writes the workflow, and FlowX audits, tests, versions, and runs it through MCP, Python SDK, and A2A interfaces. This repository contains the website only, not the FlowX engine or MCP server.
 
 ## Local preview
 
@@ -16,11 +16,11 @@ The site can be deployed to GitHub Pages or another static host. An Nginx contai
 docker compose up --build -d
 ```
 
-The default host port is 8080. The site consists of `index.html`, `index.zh-CN.html`, `index.en.html` (a compatibility redirect), `styles.css`, `assets/`, `robots.txt`, and `sitemap.xml`.
+The default host port is 8080. The site consists of English and Chinese homepages plus paired `why` (design rationale), `tools` (MCP tool surface), `showcase` (examples), and `manual` pages, along with `index.en.html` (a compatibility redirect), `styles.css`, `assets/`, `robots.txt`, and `sitemap.xml`.
 
 ## Search and sharing
 
-The canonical site is <https://www.flow-x.work/>. Both language homepages include canonical and language-alternate links, social sharing metadata, and structured data. The examples section links to the interactive demo at `assets/picture-workflow-demo.html`; the sitemap lists the canonical English and Chinese homepages plus that English-only example; the old English URL redirects to the homepage.
+The canonical site is <https://www.flow-x.work/>. Every English and Chinese page includes canonical and language-alternate links, social sharing metadata, and structured data. The homepage examples section links to the interactive demo at `assets/picture-workflow-demo.html`; the sitemap lists the five page pairs plus that English-only example; the old English URL redirects to the homepage.
 
 Search engines only read `robots.txt` from the domain root. When deployed at the root of the custom domain, the included file declares the sitemap URL. Submit <https://www.flow-x.work/sitemap.xml> in your search engine's webmaster tools.
 
