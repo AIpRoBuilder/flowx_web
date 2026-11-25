@@ -567,3 +567,51 @@ h2 { margin-bottom: 0; font-size: clamp(2.05rem, 3.2vw, 3.15rem); line-height: 1
   .mega-footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; }
 }
+
+/* ---------------------------------------------------------------------------
+   Why page: work-shape analogy, five-step build loop, examples, boundaries
+   --------------------------------------------------------------------------- */
+.analogy-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.analogy-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--border); background: #0f1116; transition: border-color .2s; }
+.analogy-card:hover { border-color: #4b4f59; }
+.analogy-visual { border-bottom: 1px solid var(--border); background: #e8eeeb; }
+.analogy-visual svg { display: block; width: 100%; height: auto; }
+.analogy-copy { padding: 19px 20px 21px; }
+.analogy-num { color: #efb877; font: 600 .6rem "SFMono-Regular", Consolas, monospace; letter-spacing: .13em; }
+.analogy-copy h3 { margin: 7px 0 6px; font-size: 1.02rem; letter-spacing: -.02em; }
+.analogy-copy p { margin: 0; color: var(--muted); font-size: .82rem; line-height: 1.7; }
+
+.process-grid-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.trace-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 18px; margin-top: 18px; }
+.trace-grid .code-window { margin: 0; }
+.trace-grid .prose p { font-size: .87rem; }
+
+.case-card .case-note { margin: 0 0 20px; padding-top: 14px; border-top: 1px solid #262930; color: #7f8691; font-size: .78rem; line-height: 1.75; }
+.case-grid + .page-actions { margin-top: 18px; }
+
+.boundary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.boundary-card { padding: 27px; border: 1px solid var(--border); background: linear-gradient(155deg, #14161c, #0c0e12); }
+.boundary-card h3 { margin: 0 0 10px; font-size: 1.16rem; letter-spacing: -.025em; }
+.boundary-card p { margin: 0; color: var(--muted); font-size: .87rem; line-height: 1.8; }
+.boundary-card ul { display: grid; gap: 8px; margin: 15px 0 0; padding: 0 0 0 18px; color: #a7acb5; font-size: .85rem; line-height: 1.75; }
+.boundary-card li::marker { color: #efb877; }
+.scope-note { margin-top: 14px; padding: 15px 17px; border: 1px solid #3a3431; border-left: 3px solid #efb877; background: #171411; color: #b9b0a8; font-size: .83rem; line-height: 1.8; }
+.scope-note strong { color: #f0c089; }
+
+@media (max-width: 1050px) {
+  .analogy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process-grid-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process-grid-5 .process-step { border-bottom: 1px solid var(--border); }
+  .process-grid-5 .process-step:nth-child(2),
+  .process-grid-5 .process-step:nth-child(4) { border-right: 0; }
+  .process-grid-5 .process-step:nth-child(2) .step-arrow,
+  .process-grid-5 .process-step:nth-child(4) .step-arrow { display: none; }
+  .process-grid-5 .process-step:nth-child(5) { grid-column: 1 / -1; border-right: 0; border-bottom: 0; }
+}
+@media (max-width: 760px) {
+  .trace-grid, .boundary-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .analogy-grid { grid-template-columns: 1fr; }
+  .analogy-visual svg { max-height: 190px; }
+}

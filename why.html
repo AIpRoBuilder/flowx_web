@@ -7,8 +7,8 @@
     <meta name="google-site-verification" content="z1j2lOwTCyCSmdxdT_rCZAdQoIIs76KouPiEtdd7D3k" />
     <meta name="baidu-site-verification" content="codeva-i7WjuOg6xc" />
     <meta name="yandex-verification" content="f1fecc89b8e0a217" />
-    <title>Why FlowX | Contracts, not prompts</title>
-    <meta name="description" content="Why FlowX builds AI agent workflows from contracts instead of one-off prompts: audits, tests, versions, run evidence, and node-level reuse" />
+    <title>Why FlowX | Give AI work a structure</title>
+    <meta name="description" content="Why FlowX turns natural-language intent into inspectable, tested, versioned, and reusable workflows for AI agents: contracts, audits, pytest gates, run evidence, and node-level reuse" />
     <link rel="canonical" href="https://www.flow-x.work/why.html" />
     <link rel="alternate" hreflang="en" href="https://www.flow-x.work/why.html" />
     <link rel="alternate" hreflang="zh-CN" href="https://www.flow-x.work/why.zh-CN.html" />
@@ -18,24 +18,24 @@
     <meta property="og:url" content="https://www.flow-x.work/why.html" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="zh_CN" />
-    <meta property="og:title" content="Why FlowX | Contracts, not prompts" />
-    <meta property="og:description" content="A chat answer is not a process. FlowX gives each artifact a contract, audits and tests what comes back, and publishes only what passes." />
+    <meta property="og:title" content="Why FlowX | Give AI work a structure" />
+    <meta property="og:description" content="Let the model reason; give the work a structure. FlowX turns intent into artifacts with contracts, audits, tests, versions, and evidence your agent can reuse and evolve." />
     <meta property="og:image" content="https://www.flow-x.work/assets/social-card.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="FlowX: build the process and keep it evolving" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Why FlowX | Contracts, not prompts" />
-    <meta name="twitter:description" content="A chat answer is not a process. FlowX gives each artifact a contract, audits and tests what comes back, and publishes only what passes." />
+    <meta name="twitter:title" content="Why FlowX | Give AI work a structure" />
+    <meta name="twitter:description" content="Let the model reason; give the work a structure. FlowX turns intent into artifacts with contracts, audits, tests, versions, and evidence your agent can reuse and evolve." />
     <meta name="twitter:image" content="https://www.flow-x.work/assets/social-card.png" />
     <meta name="twitter:image:alt" content="FlowX: build the process and keep it evolving" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Why FlowX | Contracts, not prompts",
-        "description": "Why FlowX builds AI agent workflows from contracts instead of one-off prompts: audits, tests, versions, run evidence, and node-level reuse",
+        "name": "Why FlowX | Give AI work a structure",
+        "description": "Why FlowX turns natural-language intent into inspectable, tested, versioned, and reusable workflows for AI agents: contracts, audits, pytest gates, run evidence, and node-level reuse",
         "url": "https://www.flow-x.work/why.html",
         "inLanguage": "en",
         "isPartOf": { "@type": "WebSite", "name": "FlowX", "url": "https://www.flow-x.work/" }
@@ -89,43 +89,43 @@
       <section class="page-hero" id="top">
         <div class="container page-hero-inner">
           <p class="page-kicker"><a href="index.html">FLOWX</a> <span aria-hidden="true">/</span> WHY FLOWX</p>
-          <h1>Contracts, not prompts.<br /><span>Process, not a one-off answer.</span></h1>
-          <p class="section-lead">An agent can produce a plausible answer in one turn. A team needs the same result every time, with a graph, tests, versions, and evidence. FlowX exists to make the second one possible.</p>
+          <h1>Let the model reason.<br /><span>Give the work a structure.</span></h1>
+          <p class="section-lead">AI agents are flexible at understanding intent and choosing what to do. Repeated work also needs explicit steps, clear contracts, tests, versions, and evidence. FlowX helps your agent turn a natural-language goal into an executable process it can inspect, reuse, and evolve.</p>
           <div class="page-actions">
-            <a class="button button-primary" href="manual.html#install">Install FlowX <span aria-hidden="true">↗</span></a>
-            <a class="button button-outline" href="tools.html">Browse the tool surface <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="manual.html#install">Start building <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">Explore the source <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="page-meta"><span><strong>22</strong> MCP TOOLS</span><span><strong>3</strong> INTERFACES</span><span><strong>0</strong> MODEL KEYS REQUIRED</span><span><strong>APACHE 2.0</strong></span></div>
+          <div class="page-meta"><span><strong>LOCAL-FIRST</strong> OPEN SOURCE</span><span><strong>22</strong> MCP TOOLS</span><span><strong>3</strong> INTERFACES</span><span><strong>0</strong> MODEL KEYS REQUIRED</span><span><strong>APACHE 2.0</strong></span></div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
           <div class="section-intro split-intro">
-            <div><p class="eyebrow"><span>01</span> / THE PROBLEM</p><h2>If the model owns the control flow,<br />the process is a <span class="text-gradient">guess</span></h2></div>
-            <p class="section-lead">Prompt-driven systems re-decide what to do on every run. That is flexible in a demo and fragile in production</p>
+            <div><p class="eyebrow"><span>01</span> / THE REASON</p><h2>A good answer is not<br />the same as a <span class="text-gradient">reliable process</span></h2></div>
+            <p class="section-lead">An LLM can plan, call tools, and complete a task in one conversation. But when a task repeats, the useful part is not only the last answer — it is the method that produced it: the steps, dependencies, checks, and decisions worth keeping.</p>
           </div>
           <div class="contrast-grid">
             <article class="contrast-card is-bad">
-              <span class="card-index">AGENT-CENTRIC BY DEFAULT</span>
-              <h3>The answer is the artifact</h3>
-              <p>The model decides the next step, gathers context, and returns a result. Nothing outside the conversation records why it worked.</p>
+              <span class="card-index">WHEN THE PROCESS LIVES ONLY IN A CONVERSATION</span>
+              <h3>The method stays in the transcript</h3>
+              <p>The agent may reconstruct a plan on the next run. That flexibility is useful for exploration, but the method can be difficult to inspect, test, compare, and maintain.</p>
               <ul class="contrast-list">
-                <li>The control flow is probabilistic on every run</li>
-                <li>Context and tool results are re-read and re-reasoned each time</li>
-                <li>A fix often means rebuilding the whole behavior</li>
-                <li>There is no graph, test suite, version, or run journal to inspect</li>
+                <li>Steps and control flow can vary between runs</li>
+                <li>A useful fix may be buried in a transcript</li>
+                <li>It can be hard to tell which part changed or why</li>
+                <li>There may be no versioned artifact or test evidence</li>
               </ul>
             </article>
             <article class="contrast-card is-good">
-              <span class="card-index">CONTRACT-CENTRIC WITH FLOWX</span>
-              <h3>The process is the artifact</h3>
-              <p>Your coding agent writes at build time. FlowX defines the artifact, gates the result, and runs deterministic code afterwards.</p>
+              <span class="card-index">WITH FLOWX, THE PROCESS BECOMES AN ARTIFACT</span>
+              <h3>The method becomes the artifact</h3>
+              <p>Your host agent still reasons and writes the workflow. FlowX supplies contracts, checks the returned artifacts, publishes passing versions, and runs the resulting service.</p>
               <ul class="contrast-list">
-                <li>One contract per artifact: requirement, graph, node code and test</li>
-                <li>Auditors and pytest decide what is published</li>
-                <li>Failed nodes return findings and a bounded repair task</li>
-                <li>Changes reuse nodes whose inputs did not change</li>
+                <li>Requirements, graph, node code, and tests are explicit</li>
+                <li>Auditors and pytest gate what gets published</li>
+                <li>Failures return findings and bounded repair tasks</li>
+                <li>Targeted changes can reuse unaffected nodes</li>
               </ul>
             </article>
           </div>
@@ -135,36 +135,96 @@
       <section class="section grid-surface">
         <div class="container">
           <div class="section-intro split-intro">
-            <div><p class="eyebrow"><span>02</span> / WHAT YOU GET</p><h2>Six guarantees<br />behind every <span class="text-gradient">build</span></h2></div>
-            <p class="section-lead">These are properties of the builder and service manager, not conventions your team has to remember</p>
+            <div><p class="eyebrow"><span>02</span> / WORK HAS A SHAPE</p><h2>Language expresses intent.<br />Work changes <span class="text-gradient">state</span></h2></div>
+            <p class="section-lead">Think about painting a landscape. The goal fits in one sentence, but the work is organized through stages, materials, operations, and visual feedback. The artist does not calculate every pixel from scratch; they use learned techniques and a working process.</p>
           </div>
-          <div class="claim-grid">
-            <article class="claim-card"><span class="card-index">01 / CONTRACT</span><h3>One artifact at a time</h3><p>Each task carries its instructions, rules, schema, context, and submission slots. The host agent never has to guess the shape.</p></article>
-            <article class="claim-card"><span class="card-index">02 / AUDIT</span><h3>Findings, not vibes</h3><p>A rejection names the rule, message, line, and remediation, so the next attempt can fix exactly what failed.</p></article>
-            <article class="claim-card"><span class="card-index">03 / TEST</span><h3>pytest in the loop</h3><p>Node tests run locally while you build. Repair attempts are bounded; a build cannot spin forever.</p></article>
-            <article class="claim-card"><span class="card-index">04 / VERSION</span><h3>Only passing work ships</h3><p>Accepted artifacts become versioned nodes. A failing node is not published, and its descendants are blocked.</p></article>
-            <article class="claim-card"><span class="card-index">05 / EVIDENCE</span><h3>Run journal and logs</h3><p><code>get_evidence</code> returns the latest run journal and service log tail for the next fix.</p></article>
-            <article class="claim-card"><span class="card-index">06 / REUSE</span><h3>Evolve one node</h3><p><code>begin_evolve</code> can rewrite a node with the topology frozen, or the whole graph; unchanged nodes are reused.</p></article>
+          <div class="analogy-grid">
+            <article class="analogy-card">
+              <div class="analogy-visual">
+                <svg viewBox="0 0 240 155" role="img" aria-label="A rough landscape composition sketch">
+                  <rect width="240" height="155" fill="#e8eeeb" /><path d="M18 122 77 55l37 43 39-57 69 81" fill="none" stroke="#607d78" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="5 3" /><path d="M18 122h204" stroke="#7f9990" stroke-width="1.5" /><circle cx="174" cy="35" r="13" fill="none" stroke="#df9d5e" stroke-width="2" /><path d="M34 29c23 5 28 10 45 2M30 39c19 3 28 2 42-3" stroke="#9aaca4" fill="none" stroke-width="1.2" />
+                </svg>
+              </div>
+              <div class="analogy-copy"><span class="analogy-num">STAGE 01</span><h3>Compose</h3><p>Set the structure, proportions, and intended focal point.</p></div>
+            </article>
+            <article class="analogy-card">
+              <div class="analogy-visual">
+                <svg viewBox="0 0 240 155" role="img" aria-label="A landscape with broad background color blocks">
+                  <rect width="240" height="155" fill="#f3cda6" /><circle cx="174" cy="42" r="20" fill="#f4a56c" /><path d="M0 110 65 49l47 54 39-66 89 71v47H0Z" fill="#789b98" /><path d="m0 119 52-40 43 39 45-43 100 61v19H0Z" fill="#557e79" /><rect x="0" y="130" width="240" height="25" fill="#486e61" />
+                </svg>
+              </div>
+              <div class="analogy-copy"><span class="analogy-num">STAGE 02</span><h3>Block in</h3><p>Establish large color areas before refining small details.</p></div>
+            </article>
+            <article class="analogy-card">
+              <div class="analogy-visual">
+                <svg viewBox="0 0 240 155" role="img" aria-label="A more developed sunset landscape with layered mountain forms">
+                  <defs><linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e99f7c" /><stop offset="1" stop-color="#f5d4ac" /></linearGradient></defs>
+                  <rect width="240" height="155" fill="url(#sky3)" /><circle cx="176" cy="42" r="18" fill="#f9d487" /><path d="m0 112 52-63 28 37 40-58 47 67 26-32 47 51v41H0Z" fill="#627f88" /><path d="m0 125 48-36 33 22 46-48 45 47 34-23 34 29v39H0Z" fill="#426b70" /><path d="m95 81 25-53 17 28-11-4-8 15-9-4Z" fill="#d9e1da" /><path d="m151 81 16-27 15 22-12-5-7 8Z" fill="#d9e1da" /><path d="M0 137q36-14 72 0t72 0 96 0v18H0Z" fill="#315e57" />
+                </svg>
+              </div>
+              <div class="analogy-copy"><span class="analogy-num">STAGE 03</span><h3>Layer &amp; refine</h3><p>Apply techniques in context; adjust light, depth, and form.</p></div>
+            </article>
+            <article class="analogy-card">
+              <div class="analogy-visual">
+                <svg viewBox="0 0 240 155" role="img" aria-label="A finished stylized mountain landscape at sunset">
+                  <defs><linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#df8f7d" /><stop offset=".58" stop-color="#f1c18e" /><stop offset="1" stop-color="#f6dfb8" /></linearGradient></defs>
+                  <rect width="240" height="155" fill="url(#sky4)" /><circle cx="174" cy="44" r="17" fill="#ffe6a8" /><path d="M0 112 57 42l30 42 39-58 49 70 28-34 37 42v51H0Z" fill="#617c80" /><path d="m108 46 18-20 19 31-12-6-8 8-8-7Z" fill="#e9e9d9" /><path d="m177 74 26-12 37 43v50H0v-28l48-33 36 21 35-24 28 16Z" fill="#3d6765" /><path d="M0 139q35-17 72-2 41 15 78-1 49-20 90 0v19H0Z" fill="#284f4a" /><path d="M25 135q16-13 30-2m16 5q15-16 31-3m91-5q13-13 25-2" stroke="#a6b79a" stroke-width="2" fill="none" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="analogy-copy"><span class="analogy-num">STAGE 04</span><h3>Review &amp; amend</h3><p>Inspect the result, identify what is off, and revise the right part.</p></div>
+            </article>
+          </div>
+          <div class="interface-note">
+            <span class="note-mark" aria-hidden="true">✦</span>
+            <p><strong>The point is not that every task has one fixed sequence.</strong> Good work is often conditional and iterative. FlowX makes the chosen procedure explicit enough to inspect, test, execute, and change — while the host agent remains free to reason about the goal and the next improvement.</p>
           </div>
         </div>
       </section>
 
       <section class="section">
-        <div class="container split-section">
-          <div>
-            <p class="eyebrow"><span>03</span> / THE BUILD</p>
-            <h2 class="split-heading">Everything leaves a trace</h2>
+        <div class="container">
+          <div class="section-intro split-intro">
+            <div><p class="eyebrow"><span>03</span> / A DIVISION OF RESPONSIBILITY</p><h2>Let each layer do<br />what it is <span class="text-gradient">good at</span></h2></div>
+            <p class="section-lead">A useful agent system does not have to choose between flexible reasoning and explicit processes. Give the host agent room to interpret the task; give the work a structure that can be checked and maintained.</p>
           </div>
-          <div class="prose">
-            <p>FlowX does not ask you to trust a transcript. The build writes a <strong>requirement</strong>, a <strong>workflow graph</strong>, one <strong>code and test pair per node</strong>, and a rendered <strong>entrypoint</strong>. Each artifact passes its own gate; when a gate rejects something, the finding points at the exact line and the task comes back with a remediation.</p>
-            <p>The generated service is regular FastAPI code on top of the <code>ag_ui_workflow</code> runtime. The service manager starts it, feeds one step at a time, resets paused sessions, and returns evidence. The intelligent UI stays above; FlowX stays underneath.</p>
+          <div class="interface-grid">
+            <article class="interface-card"><div class="interface-top"><span class="interface-label">01 / THE USER</span><span class="interface-icon icon-orange" aria-hidden="true">◐</span></div><h3>Set the intent</h3><p>Describe the desired outcome, constraints, quality bar, and decisions that need your approval.</p><span class="interface-tag">WHAT MATTERS?</span></article>
+            <article class="interface-card"><div class="interface-top"><span class="interface-label">02 / THE HOST AGENT</span><span class="interface-icon icon-purple" aria-hidden="true">✳</span></div><h3>Reason and author</h3><p>Interpret the request, plan the work, use models and tools, and write workflow artifacts from FlowX contracts.</p><span class="interface-tag">WHAT SHOULD HAPPEN?</span></article>
+            <article class="interface-card"><div class="interface-top"><span class="interface-label">03 / FLOWX</span><span class="interface-icon icon-blue" aria-hidden="true">▣</span></div><h3>Structure and verify</h3><p>Define artifact contracts, audit and test submissions, publish passing versions, run the service, and return evidence.</p><span class="interface-tag">MAKE THE PROCESS REAL</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid-surface">
+        <div class="container">
+          <div class="section-intro split-intro">
+            <div><p class="eyebrow"><span>04</span> / HOW IT WORKS</p><h2>From intent to a process<br />you can <span class="text-gradient">inspect</span></h2></div>
+            <p class="section-lead">Your agent uses FlowX as a builder and service manager. Each stage leaves an artifact, a gate result, or a journal entry — not just a transcript.</p>
+          </div>
+          <div class="process-board">
+            <div class="board-header"><span><i class="board-dot"></i>FROM INTENT TO EXECUTABLE PROCESS</span><span>FLOWX / BUILD LOOP</span></div>
+            <div class="process-grid process-grid-5">
+              <article class="process-step"><span class="step-number">01</span><div class="step-symbol icon-orange" aria-hidden="true">✎</div><h3>Describe</h3><p>Tell your agent the task, inputs, outputs, and constraints.</p><span class="step-arrow" aria-hidden="true">→</span></article>
+              <article class="process-step"><span class="step-number">02</span><div class="step-symbol icon-green" aria-hidden="true">▤</div><h3>Contract</h3><p>FlowX returns tasks with rules, schemas, context, and artifact slots.</p><span class="step-arrow" aria-hidden="true">→</span></article>
+              <article class="process-step"><span class="step-number">03</span><div class="step-symbol icon-purple" aria-hidden="true">⌁</div><h3>Build &amp; gate</h3><p>The agent writes requirements, graph, node code, and tests. FlowX audits and runs pytest.</p><span class="step-arrow" aria-hidden="true">→</span></article>
+              <article class="process-step"><span class="step-number">04</span><div class="step-symbol icon-blue" aria-hidden="true">▷</div><h3>Publish &amp; run</h3><p>Accepted artifacts become versioned nodes; the service manager runs the workflow.</p><span class="step-arrow" aria-hidden="true">→</span></article>
+              <article class="process-step"><span class="step-number">05</span><div class="step-symbol icon-orange" aria-hidden="true">↻</div><h3>Observe &amp; evolve</h3><p>Inspect run evidence, then change a node or the whole graph through conversation.</p></article>
+            </div>
+            <div class="board-footer"><span>↻ FEEDBACK CAN OPEN A TARGETED WORKFLOW EVOLUTION</span><span>EVIDENCE AT EVERY STAGE</span></div>
+          </div>
+          <div class="trace-grid">
+            <div class="prose">
+              <p>FlowX does not ask you to trust a transcript. The build writes a <strong>requirement</strong>, a <strong>workflow graph</strong>, one <strong>code and test pair per node</strong>, and a rendered <strong>entrypoint</strong>. Each artifact passes its own gate; when a gate rejects something, the finding points at the exact line and the task comes back with a remediation.</p>
+              <p>The generated service is regular FastAPI code on top of the <code>ag_ui_workflow</code> runtime. The service manager starts it, feeds one step at a time, resets paused sessions, and returns evidence. The intelligent UI stays above; FlowX stays underneath.</p>
+            </div>
             <div class="code-window">
-              <div class="code-header"><span>ARTIFACT FLOW</span><span>READ-ONLY VIEW</span></div>
+              <div class="code-header"><span>ARTIFACT PATH</span><span>EVERY STAGE LEAVES A TRACE</span></div>
               <pre>intent
   → requirement.md
   → workflow.json
   → nodes/*.py + tests
   → main.py (rendered)
+  → FastAPI service
 
 gates
   requirement check
@@ -177,37 +237,94 @@ gates
         </div>
       </section>
 
+      <section class="section">
+        <div class="container">
+          <div class="section-intro split-intro">
+            <div><p class="eyebrow"><span>05</span> / WHAT YOU GET</p><h2>Six guarantees<br />behind every <span class="text-gradient">build</span></h2></div>
+            <p class="section-lead">These are properties of the builder and service manager — not reminders your team has to keep in its prompt.</p>
+          </div>
+          <div class="claim-grid">
+            <article class="claim-card"><span class="card-index">01 / CONTRACT</span><h3>One artifact at a time</h3><p>Each task carries its instructions, rules, schema, context, and submission slots. The host agent never has to guess the shape.</p></article>
+            <article class="claim-card"><span class="card-index">02 / AUDIT</span><h3>Findings, not vibes</h3><p>A rejection names the rule, message, line, and remediation, so the next attempt can fix exactly what failed.</p></article>
+            <article class="claim-card"><span class="card-index">03 / TEST</span><h3>pytest in the loop</h3><p>Node tests run locally while you build. Repair attempts are bounded; a build cannot spin forever.</p></article>
+            <article class="claim-card"><span class="card-index">04 / VERSION</span><h3>Only passing work ships</h3><p>Accepted artifacts become versioned nodes. A failing node is not published, and its descendants are blocked.</p></article>
+            <article class="claim-card"><span class="card-index">05 / EVIDENCE</span><h3>Run journal and logs</h3><p><code>get_evidence</code> returns the latest run journal and service log tail for the next fix.</p></article>
+            <article class="claim-card"><span class="card-index">06 / REUSE</span><h3>Evolve one node</h3><p><code>begin_evolve</code> can rewrite a node with the topology frozen, or the whole graph; unchanged nodes are reused.</p></article>
+          </div>
+        </div>
+      </section>
+
       <section class="section grid-surface">
         <div class="container">
           <div class="section-intro split-intro">
-            <div><p class="eyebrow"><span>04</span> / THE ARCHITECTURE</p><h2>Two entities.<br />Three <span class="text-gradient">interfaces</span></h2></div>
-            <p class="section-lead">The same builder and service manager are exposed to different agent hosts without changing the workflow</p>
+            <div><p class="eyebrow"><span>06</span> / REAL WORKFLOWS</p><h2>Different jobs.<br />Same <span class="text-gradient">build loop</span></h2></div>
+            <p class="section-lead">FlowX is not tied to one domain. Bring a recurring task from your own work and make its procedure inspectable and reusable.</p>
           </div>
-          <div class="interface-grid">
-            <article class="interface-card"><div class="interface-top"><span class="interface-label">01 / BUILDER</span><span class="interface-icon icon-orange" aria-hidden="true">◇</span></div><h3>WorkflowBuilder</h3><p>Sends contracts, verifies artifacts with auditors and pytest, publishes versions, and renders the FastAPI service.</p><span class="interface-tag">BUILD + GATE</span></article>
-            <article class="interface-card"><div class="interface-top"><span class="interface-label">02 / SERVICE</span><span class="interface-icon icon-purple" aria-hidden="true">▷</span></div><h3>ServiceManager</h3><p>Runs the rendered service, drives steps, resets sessions, and returns the run journal and logs as evidence.</p><span class="interface-tag">RUN + OBSERVE</span></article>
-            <article class="interface-card"><div class="interface-top"><span class="interface-label">03 / HOSTS</span><span class="interface-icon icon-blue" aria-hidden="true">⇄</span></div><h3>MCP · SDK · A2A</h3><p>Claude Code, Codex, Hermes, DeepSeek Harness, a Python application, or a peer agent can all operate the same two entities.</p><span class="interface-tag">BRING YOUR AGENT</span></article>
+          <div class="case-grid">
+            <article class="case-card">
+              <span class="card-index">QUICKSTART / MCP</span>
+              <h3>Ticket triage</h3>
+              <p>Classify an incoming support ticket, assign priority, and draft a reply. Each node has its own implementation and test.</p>
+              <ul class="example-tags"><li>TICKET</li><li>CLASSIFY</li><li>PRIORITIZE</li><li>DRAFT REPLY</li></ul>
+              <p class="case-note">A documented quickstart that demonstrates intent → contracts → graph → node code and tests → runnable service.</p>
+              <a class="case-link" href="manual.html#first-build">Follow the quickstart <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="case-card">
+              <span class="card-index">MEDIA / FLOWX 1.0.3</span>
+              <h3>Image variants</h3>
+              <p>Turn a brief into image prompts, render candidates, score them, and package selected outputs. Nodes can return prompt, image, and video cards.</p>
+              <ul class="example-tags"><li>BRIEF</li><li>PROMPTS</li><li>RENDER</li><li>SCORE</li><li>PACKAGE</li></ul>
+              <p class="case-note">The media toolkit documents provider helpers, Pillow, FFmpeg, and a dry-run mode for zero-cost node tests.</p>
+              <a class="case-link" href="showcase.html">See the showcase <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="page-actions">
+            <a class="button button-outline" href="showcase.html">See the showcase <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="tools.html">Browse the tool surface <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <figure class="pull-quote">
-            <blockquote>“Turn an intent into an editable, reusable process instead of a one-off answer. Change the workflow later without rebuilding unchanged nodes.”</blockquote>
-            <figcaption>FLOWX README · <a href="https://github.com/AIpRoBuilder/FlowX#why-flowx" target="_blank" rel="noopener noreferrer">READ THE SOURCE ↗</a></figcaption>
-          </figure>
+          <div class="section-intro split-intro">
+            <div><p class="eyebrow"><span>07</span> / FIT &amp; BOUNDARIES</p><h2>Bring your agent.<br />Keep your <span class="text-gradient">way of working</span></h2></div>
+            <p class="section-lead">FlowX is designed to sit underneath an existing agent host. It does not replace the model's reasoning or require FlowX to own model credentials.</p>
+          </div>
+          <div class="boundary-grid">
+            <article class="boundary-card">
+              <h3>Where FlowX fits</h3>
+              <p>The same builder and service manager are exposed through three interfaces, so different hosts can operate the same workflow artifacts.</p>
+              <ul>
+                <li>Local stdio MCP server</li>
+                <li>Python SDK for agents and applications</li>
+                <li>A2A adapter for peer-agent interaction</li>
+                <li>Agent hosts such as Claude Code, Codex, Hermes, and DeepSeek Harness</li>
+              </ul>
+            </article>
+            <article class="boundary-card">
+              <h3>What FlowX does not claim</h3>
+              <p>Explicit workflows complement flexible reasoning; they do not make every task deterministic or remove the need for judgment.</p>
+              <ul>
+                <li>FlowX is not another general-purpose LLM or agent.</li>
+                <li>It does not automatically turn every conversation into a skill.</li>
+                <li>Model calls and external services can still be probabilistic or fail.</li>
+                <li>Its current service manager is not a claim of Temporal-style distributed crash recovery.</li>
+              </ul>
+            </article>
+          </div>
+          <div class="scope-note"><strong>Clear division of responsibility:</strong> the host agent interprets and authors; FlowX contracts, audits, tests, versions, and runs the workflow. The process becomes a managed artifact without taking reasoning away from the agent.</div>
         </div>
       </section>
 
       <section class="build-cta">
         <div class="container build-cta-inner">
-          <p class="eyebrow"><span>05</span> / NEXT</p>
-          <h2>Build the process.<br /><span class="text-gradient">Keep it evolving.</span></h2>
-          <p class="section-lead">Install FlowX, connect your harness, and let the first build leave a trail you can inspect.</p>
+          <p class="eyebrow"><span>08</span> / NEXT</p>
+          <h2>Turn a repeatable task into<br /><span class="text-gradient">a capability your agent keeps</span></h2>
+          <p class="section-lead">Start with one real task. Describe what good looks like, let your agent build it through FlowX, inspect what was produced, and improve the part that needs work.</p>
           <div class="page-actions">
             <a class="button button-primary" href="manual.html#install">Read the manual <span aria-hidden="true">↗</span></a>
-            <a class="button button-outline" href="showcase.html">See what a build looks like <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://github.com/AIpRoBuilder/FlowX" target="_blank" rel="noopener noreferrer">GitHub repository <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
